@@ -16,15 +16,17 @@
     <!-- Site Title -->
     <title>Personal</title>
 
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
     <!--
     CSS
     ============================================= -->
-    <link rel="stylesheet" href="css/outlines.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-<h1>Personal</h1>
+<h1 class="float-start">Personal</h1>
 <header>
     <nav id="nav-menu-container">
         <ul class="nav-menu">
@@ -42,7 +44,7 @@
     <section class="banner-area">
         <div class="container">
             <div class="row fullscreen align-items-center justify-content-between">
-                <div class="col-lg-6 col-md-6 banner-left">
+                <div class="col-lg-6 col-md-6 banner-left align-self-start">
                     <article class="top-part">
                         <h1 class="text-uppercase">I'm Zidik</h1>
                         <h2>Web Developer</h2>
@@ -54,7 +56,24 @@
                                     class="fa fa-https://github.com/Zidikk/WebDev"></i></a>
                         </aside>
                         <a href="#" class="primary-btn">Get Started</a>
+                        <table>
+                            <tr>
+                                <th>Month</th>
+                                <th>Savings</th>
+                            </tr>
+                            <tr>
+                                <td>January</td>
+                                <td>$100</td>
+                            </tr>
+                            <tr>
+                                <td>February</td>
+                                <td>$80</td>
+                            </tr>
+                        </table>
                     </article>
+                </div>
+                <div class="col-lg-6 col-md-6 banner-right d-flex align-self-start">
+                    <img class="img-fluid" src="img/me.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -68,30 +87,30 @@
         <div class="row">
             <div class="col-lg-5 col-md-6 col-sm-6">
                 <div class="cool-logo">
-                    <pre>
-       zzzzzzzzzzzzzzzz  zzzz   zzzzzzzzz        zzzz  zzzz     zzzz
-       zzzzzzzzzzzzzzz   zzzz   zzzzzzzzzz       zzzz  zzzz    zzzz
-                 zzzz           zzzz   zzzz            zzzz   zzzz
-                zzzz     zzzz   zzzz    zzzz     zzzz  zzzz  zzzz
-               zzzz      zzzz   zzzz     zzzz    zzzz  zzzz zzzz
-              zzzz       zzzz   zzzz      zzzz   zzzz  zzzzzzzz
-             zzzz        zzzz   zzzz       zzzz  zzzz  zzzzzzzz
-            zzzz         zzzz   zzzz      zzzz   zzzz  zzzz zzzz
-           zzzz          zzzz   zzzz     zzzz    zzzz  zzzz  zzzz
-          zzzz           zzzz   zzzz    zzzz     zzzz  zzzz   zzzz
-         zzzz            zzzz   zzzz   zzzz      zzzz  zzzz    zzzz
-        zzzzzzzzzzzzzzz  zzzz   zzzzzzzzzz       zzzz  zzzz     zzzz
-       zzzzzzzzzzzzzzzz  zzzz   zzzzzzzzz        zzzz  zzzz      zzzz
+                    <pre class="footer">
+zzzzzzzzzzzzzzzz  zzzz   zzzzzzzzz        zzzz  zzzz     zzzz
+zzzzzzzzzzzzzzz   zzzz   zzzzzzzzzz       zzzz  zzzz    zzzz
+          zzzz           zzzz   zzzz            zzzz   zzzz
+         zzzz     zzzz   zzzz    zzzz     zzzz  zzzz  zzzz
+        zzzz      zzzz   zzzz     zzzz    zzzz  zzzz zzzz
+       zzzz       zzzz   zzzz      zzzz   zzzz  zzzzzzzz
+      zzzz        zzzz   zzzz       zzzz  zzzz  zzzzzzzz
+     zzzz         zzzz   zzzz      zzzz   zzzz  zzzz zzzz
+    zzzz          zzzz   zzzz     zzzz    zzzz  zzzz  zzzz
+   zzzz           zzzz   zzzz    zzzz     zzzz  zzzz   zzzz
+  zzzz            zzzz   zzzz   zzzz      zzzz  zzzz    zzzz
+ zzzzzzzzzzzzzzz  zzzz   zzzzzzzzzz       zzzz  zzzz     zzzz
+zzzzzzzzzzzzzzzz  zzzz   zzzzzzzzz        zzzz  zzzz      zzzz
         </pre>
                 </div>
             </div>
             <div class="col-lg-5 col-md-6 col-sm-6">
                 <div class="single-footer-widget">
-                    <h4>Formula for success</h4>
+                    <h4 class="footer">Formula for success</h4>
                     <p>
                         People have such different paths and they all lead to
-                        <del>a bar</del>
-                        <ins>the grave</ins>
+                        <i><del>a bar</del></i>
+                        <b><ins>the grave</ins></b>
                         .
                     </p>
                     <p class="footer-text">
@@ -101,7 +120,7 @@
             </div>
             <div class="col-lg-5 col-md-6 col-sm-6">
                 <div class="single-footer-widget">
-                    <h4>Newsletter</h4>
+                    <h4 class="footer">Newsletter</h4>
                     <p>Stay updated with me</p>
                     <div class="" id="mc_embed_signup">
                         <form target="_blank"
@@ -123,7 +142,7 @@
             </div>
             <div class="col-lg-2 col-md-6 col-sm-6 social-widget">
                 <div class="single-footer-widget">
-                    <h4>Follow Me</h4>
+                    <h4 class="footer">Follow Me</h4>
                     <p>Let us be social</p>
                     <div class="footer-social d-flex align-items-center">
                         <a href="https://github.com/Zidikk/WebDev"><i class="fa fa-facebook"></i></a>
