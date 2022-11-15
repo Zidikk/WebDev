@@ -23,6 +23,8 @@
     CSS
     ============================================= -->
     <link rel="stylesheet" href="css/main.css">
+    <script src="js/script.js"></script>
+    <script src="js/counterTime.js"></script>
 </head>
 
 <body>
@@ -30,10 +32,10 @@
 <header>
     <nav id="nav-menu-container">
         <ul class="nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li class="menuItem"><a href="index.html">Home</a></li>
+            <li class="menuItem"><a href="about.html">About</a></li>
+            <li class="menuItem"><a href="portfolio.html">Portfolio</a></li>
+            <li class="menuItem"><a href="contact.html">Contact</a></li>
         </ul>
     </nav><!-- #nav-menu-container -->
 </header><!-- #header -->
@@ -41,6 +43,7 @@
 
 <main>
     <!-- start banner Area -->
+    <div id="loadTime"></div>
     <section class="banner-area">
         <div class="container">
             <div class="row fullscreen align-items-center justify-content-between">
@@ -82,7 +85,7 @@
                     </table>
                 </div>
                 <div class="col-lg-6 col-md-6 banner-right d-flex">
-                    <img class="img-fluid" src="img/me.jpg" alt="">
+                    <img class="img-fluid hide-on-phone" src="img/me.jpg" alt="">
                 </div>
             </div>
         </div>

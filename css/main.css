@@ -122,8 +122,17 @@ ins {
     display: grid;
 }
 
+.menu li:hover {
+    text-decoration: underline;
+}
+
+.menuItem.active {
+    border: 10px;
+    background-color: #4D2657;
+}
+
 @media screen and (max-width: 768px) {
-    #nav-menu-container {
+    .hide-on-phone {
         display: none;
     }
 }
