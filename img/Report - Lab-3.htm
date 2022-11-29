@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html style="scroll-padding-top: 80px; color-scheme: light;" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body.dragging * {
+                cursor: grabbing !important;
+            }
+            * {
+                box-sizing: border-box;
+            }
+            *:focus,
+            *:hover {
+                outline: none;
+            }
+            .gitbook-splashscreen {
+                position: fixed;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                display: flex;
+                width: 100%;
+                height: 100%;
+            }
+            .slate-spacer {
+                height: 0;
+                color: transparent;
+                outline: none;
+                position: absolute;
+            }
+            @keyframes LoadingIndicator {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+            [data-loading-indicator='true'] {
+                animation: LoadingIndicator 0.6s ease infinite;
+            }
+        </style>
+        <title>Report - Lab-3</title>
+<meta name="twitter:site" content="Lab-3" id="__meta-twitter:site">
+<link rel="preload" as="font" type="font/woff2" href="https://app.gitbook.com/public/fonts/Inter/Inter-Bold.woff2?v=3.19" crossorigin="anonymous">
+<link rel="preload" as="font" type="font/woff2" href="https://app.gitbook.com/public/fonts/Inter/Inter-BoldItalic.woff2?v=3.19" crossorigin="anonymous">
+<link rel="preload" as="font" type="font/woff2" href="https://app.gitbook.com/public/fonts/Inter/Inter-ExtraBold.woff2?v=3.19" crossorigin="anonymous">
+<link rel="preload" as="font" type="font/woff2" href="https://app.gitbook.com/public/fonts/Inter/Inter-ExtraBoldItalic.woff2?v=3.19" crossorigin="anonymous">
+<link rel="preload" as="font" type="font/woff2" href="https://app.gitbook.com/public/fonts/Inter/Inter-Medium.woff2?v=3.19" crossorigin="anonymous">
+<link rel="preload" as="font" type="font/woff2" href="https://app.gitbook.com/public/fonts/Inter/Inter-MediumItalic.woff2?v=3.19" crossorigin="anonymous">
+<link rel="preload" as="font" type="font/woff2" href="https://app.gitbook.com/public/fonts/Inter/Inter-Regular.woff2?v=3.19" crossorigin="anonymous">
+<link rel="preload" as="font" type="font/woff2" href="https://app.gitbook.com/public/fonts/Inter/Inter-Italic.woff2?v=3.19" crossorigin="anonymous">
+        <style id="__font-Inter-gitbook-content-font">
+            @font-face {
+            font-family: 'gitbook-content-font';
+            font-style:  normal;
+            font-weight: 700;
+            font-display: swap;
+            src: local("Inter Bold"), local("Inter-Bold"), url("https://app.gitbook.com/public/fonts/Inter/Inter-Bold.woff2?v=3.19") format("woff2"),
+                    url("https://app.gitbook.com/public/fonts/Inter/Inter-Bold.woff?v=3.19") format("woff");
+        }
+@font-face {
+            font-family: 'gitbook-content-font';
+            font-style:  italic;
+            font-weight: 700;
+            font-display: swap;
+            src: local("Inter BoldItalic"), local("Inter-BoldItalic"), url("https://app.gitbook.com/public/fonts/Inter/Inter-BoldItalic.woff2?v=3.19") format("woff2"),
+                    url("https://app.gitbook.com/public/fonts/Inter/Inter-BoldItalic.woff?v=3.19") format("woff");
+        }
+@font-face {
+            font-family: 'gitbook-content-font';
+            font-style:  normal;
+            font-weight: 800;
+            font-display: swap;
+            src: local("Inter ExtraBold"), local("Inter-ExtraBold"), url("https://app.gitbook.com/public/fonts/Inter/Inter-ExtraBold.woff2?v=3.19") format("woff2"),
+                    url("https://app.gitbook.com/public/fonts/Inter/Inter-ExtraBold.woff?v=3.19") format("woff");
+        }
+@font-face {
+            font-family: 'gitbook-content-font';
+            font-style:  italic;
+            font-weight: 800;
+            font-display: swap;
+            src: local("Inter ExtraBoldItalic"), local("Inter-ExtraBoldItalic"), url("https://app.gitbook.com/public/fonts/Inter/Inter-ExtraBoldItalic.woff2?v=3.19") format("woff2"),
+                    url("https://app.gitbook.com/public/fonts/Inter/Inter-ExtraBoldItalic.woff?v=3.19") format("woff");
+        }
+@font-face {
+            font-family: 'gitbook-content-font';
+            font-style:  normal;
+            font-weight: 500;
+            font-display: swap;
+            src: local("Inter Medium"), local("Inter-Medium"), url("https://app.gitbook.com/public/fonts/Inter/Inter-Medium.woff2?v=3.19") format("woff2"),
+                    url("https://app.gitbook.com/public/fonts/Inter/Inter-Medium.woff?v=3.19") format("woff");
+        }
+@font-face {
+            font-family: 'gitbook-content-font';
+            font-style:  italic;
+            font-weight: 500;
+            font-display: swap;
+            src: local("Inter MediumItalic"), local("Inter-MediumItalic"), url("https://app.gitbook.com/public/fonts/Inter/Inter-MediumItalic.woff2?v=3.19") format("woff2"),
+                    url("https://app.gitbook.com/public/fonts/Inter/Inter-MediumItalic.woff?v=3.19") format("woff");
+        }
+@font-face {
+            font-family: 'gitbook-content-font';
+            font-style:  normal;
+            font-weight: 400;
+            font-display: swap;
+            src: local("Inter Regular"), local("Inter-Regular"), url("https://app.gitbook.com/public/fonts/Inter/Inter-Regular.woff2?v=3.19") format("woff2"),
+                    url("https://app.gitbook.com/public/fonts/Inter/Inter-Regular.woff?v=3.19") format("woff");
+        }
+@font-face {
+            font-family: 'gitbook-content-font';
+            font-style:  italic;
+            font-weight: 400;
+            font-display: swap;
+            src: local("Inter Italic"), local("Inter-Italic"), url("https://app.gitbook.com/public/fonts/Inter/Inter-Italic.woff2?v=3.19") format("woff2"),
+                    url("https://app.gitbook.com/public/fonts/Inter/Inter-Italic.woff?v=3.19") format("woff");
+        }
+        </style>
+<meta name="description" content="Добавьте в вашу документацию отчёт по каждому пункту работы." id="__meta-description">
+<meta name="og:description" content="Добавьте в вашу документацию отчёт по каждому пункту работы." id="__meta-og:description">
+<meta name="og:image" content="https://app.gitbook.com/share/space/thumbnail/88GZRmcqzcxgcn6et6Qz/page/50ynflc6SoL1SwOVN0Fq.png?color=&amp;logo=&amp;theme=" id="__meta-og:image">
+<meta name="twitter:card" content="summary_large_image" id="__meta-twitter:card">
+<meta name="og:title" content="Report" id="__meta-og:title">
+<meta name="robots" content="index" id="__meta-robots">
+<link rel="icon" href="https://app.gitbook.com/public/emojis/1f97c.png?v=6.0.0" id="__link-icon">
+<link rel="stylesheet" href="Report%20-%20Lab-3_files/emoji-assets-sprite.css" type="text/css" media="all">
+
+                
+                <script type="module" defer="defer" src="Report%20-%20Lab-3_files/public-Q5HE32MP.min.js"></script>
+                <style id="react-native-stylesheet">[stylesheet-group="0"]{}
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+body{margin:0;}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+input::-webkit-search-cancel-button,input::-webkit-search-decoration,input::-webkit-search-results-button,input::-webkit-search-results-decoration{display:none;}
+[stylesheet-group="0.1"]{}
+:focus:not([data-focusvisible-polyfill]){outline: none;}
+[stylesheet-group="0.5"]{}
+.css-18t94o4{cursor:pointer;}
+.css-4rbku5{background-color:rgba(0,0,0,0.00);color:inherit;font:inherit;list-style:none;margin-bottom:0px;margin-left:0px;margin-right:0px;margin-top:0px;text-align:inherit;text-decoration:none;}
+[stylesheet-group="1"]{}
+.css-1dbjc4n{-ms-flex-align:stretch;-ms-flex-direction:column;-ms-flex-negative:0;-ms-flex-preferred-size:auto;-webkit-align-items:stretch;-webkit-box-align:stretch;-webkit-box-direction:normal;-webkit-box-orient:vertical;-webkit-flex-basis:auto;-webkit-flex-direction:column;-webkit-flex-shrink:0;align-items:stretch;border:0 solid black;box-sizing:border-box;display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;flex-basis:auto;flex-direction:column;flex-shrink:0;margin-bottom:0px;margin-left:0px;margin-right:0px;margin-top:0px;min-height:0px;min-width:0px;padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:0px;position:relative;z-index:0;}
+.css-901oao{border:0 solid black;box-sizing:border-box;color:rgba(0,0,0,1.00);display:inline;font:14px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;margin-bottom:0px;margin-left:0px;margin-right:0px;margin-top:0px;padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:0px;white-space:pre-wrap;word-wrap:break-word;}
+.css-16my406{color:inherit;font:inherit;white-space:inherit;}
+.css-vcwn7f{max-width:100%;overflow-x:hidden;overflow-y:hidden;text-overflow:ellipsis;white-space:pre;}
+[stylesheet-group="2"]{}
+.r-13awgt0{-ms-flex:1 1 0%;-webkit-flex:1;flex:1;}
+.r-1xc7w19{border-bottom-color:rgba(0,0,0,1.00);border-left-color:rgba(0,0,0,1.00);border-right-color:rgba(0,0,0,1.00);border-top-color:rgba(0,0,0,1.00);}
+.r-1phboty{border-bottom-style:solid;border-left-style:solid;border-right-style:solid;border-top-style:solid;}
+.r-1yadl64{border-bottom-width:0px;border-left-width:0px;border-right-width:0px;border-top-width:0px;}
+.r-6koalj{display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;}
+.r-crgep1{margin-bottom:0px;margin-left:0px;margin-right:0px;margin-top:0px;}
+.r-t60dpp{padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:0px;}
+.r-42olwf{border-bottom-color:rgba(0,0,0,0.00);border-left-color:rgba(0,0,0,0.00);border-right-color:rgba(0,0,0,0.00);border-top-color:rgba(0,0,0,0.00);}
+.r-rs99b7{border-bottom-width:1px;border-left-width:1px;border-right-width:1px;border-top-width:1px;}
+.r-z2wwpe{border-bottom-left-radius:4px;border-bottom-right-radius:4px;border-top-left-radius:4px;border-top-right-radius:4px;}
+.r-18c69zk{border-bottom-left-radius:100px;border-bottom-right-radius:100px;border-top-left-radius:100px;border-top-right-radius:100px;}
+.r-kdyh1x{border-bottom-left-radius:6px;border-bottom-right-radius:6px;border-top-left-radius:6px;border-top-right-radius:6px;}
+.r-1xfd6ze{border-bottom-left-radius:8px;border-bottom-right-radius:8px;border-top-left-radius:8px;border-top-right-radius:8px;}
+.r-1udh08x{overflow-x:hidden;overflow-y:hidden;}
+.r-4qtqp9{display:inline-block;}
+.r-190qawg{border-bottom-color:rgba(227,232,237,1.00);border-left-color:rgba(227,232,237,1.00);border-right-color:rgba(227,232,237,1.00);border-top-color:rgba(227,232,237,1.00);}
+.r-nsbfu8{padding-bottom:16px;padding-left:16px;padding-right:16px;padding-top:16px;}
+[stylesheet-group="2.1"]{}
+.r-1jgb5lz{margin-left:auto;margin-right:auto;}
+.r-1pn2ns4{padding-left:8px;padding-right:8px;}
+.r-ymttw5{padding-left:16px;padding-right:16px;}
+.r-mk0yit{padding-left:0px;padding-right:0px;}
+.r-s1qlax{padding-left:4px;padding-right:4px;}
+.r-1e081e0{padding-left:12px;padding-right:12px;}
+.r-1yzf0co{padding-bottom:16px;padding-top:16px;}
+.r-5njf8e{padding-bottom:8px;padding-top:8px;}
+.r-pw2am6{margin-bottom:24px;margin-top:24px;}
+.r-1guathk{padding-left:24px;padding-right:24px;}
+.r-oyd9sg{padding-bottom:4px;padding-top:4px;}
+.r-1r5su4o{margin-bottom:16px;margin-top:16px;}
+[stylesheet-group="2.2"]{}
+.r-12vffkv>*{pointer-events:auto;}
+.r-12vffkv{pointer-events:none!important;}
+.r-1oszu61{-ms-flex-align:stretch;-webkit-align-items:stretch;-webkit-box-align:stretch;align-items:stretch;}
+.r-deolkf{box-sizing:border-box;}
+.r-1mlwlqe{-ms-flex-preferred-size:auto;-webkit-flex-basis:auto;flex-basis:auto;}
+.r-eqz5dr{-ms-flex-direction:column;-webkit-box-direction:normal;-webkit-box-orient:vertical;-webkit-flex-direction:column;flex-direction:column;}
+.r-1q142lx{-ms-flex-negative:0;-webkit-flex-shrink:0;flex-shrink:0;}
+.r-ifefl9{min-height:0px;}
+.r-bcqeeo{min-width:0px;}
+.r-bnwqim{position:relative;}
+.r-417010{z-index:0;}
+.r-14lw9ot{background-color:rgba(255,255,255,1.00);}
+.r-nzcix3{border-bottom-color:rgba(227,232,237,1.00);}
+.r-qklmqi{border-bottom-width:1px;}
+.r-gtdqiz{position:-webkit-sticky;position:sticky;}
+.r-ipm5af{top:0px;}
+.r-184en5c{z-index:1;}
+.r-18u37iz{-ms-flex-direction:row;-webkit-box-direction:normal;-webkit-box-orient:horizontal;-webkit-flex-direction:row;flex-direction:row;}
+.r-1awozwy{-ms-flex-align:center;-webkit-align-items:center;-webkit-box-align:center;align-items:center;}
+.r-ty80ws{max-width:1510px;}
+.r-13qz1uu{width:100%;}
+.r-eafdt9{-webkit-transition-duration:0.15s;transition-duration:0.15s;}
+.r-1i6wzkk{-moz-transition-property:opacity;-webkit-transition-property:opacity;transition-property:opacity;}
+.r-lrvibr{-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;user-select:none;}
+.r-1loqt21{cursor:pointer;}
+.r-1otgn73{-ms-touch-action:manipulation;touch-action:manipulation;}
+.r-18kxxzh{-ms-flex-positive:0;-webkit-box-flex:0;-webkit-flex-grow:0;flex-grow:0;}
+.r-1777fci{-ms-flex-pack:center;-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center;}
+.r-1ny4l3l{outline-style:none;}
+.r-eu3ka{height:40px;}
+.r-1bnj018{color:rgba(92,105,117,1.00);}
+.r-1kb76zh{margin-right:8px;}
+.r-1aockid{width:40px;}
+.r-h7gdob{color:currentColor;}
+.r-17s6mgv{-ms-flex-pack:end;-webkit-box-pack:end;-webkit-justify-content:flex-end;justify-content:flex-end;}
+.r-1ro0kt6{-ms-flex-preferred-size:0%;-webkit-flex-basis:0%;flex-basis:0%;}
+.r-16y2uox{-ms-flex-positive:1;-webkit-box-flex:1;-webkit-flex-grow:1;flex-grow:1;}
+.r-1wbh5a2{-ms-flex-negative:1;-webkit-flex-shrink:1;flex-shrink:1;}
+.r-1qhn6m8{padding-left:16px;}
+.r-1jj8364{margin-left:auto;}
+.r-puj83k{padding-left:24px;}
+.r-1pyaxff{padding-right:8px;}
+.r-16vg0q1{max-width:225px;}
+.r-1wtj0ep{-ms-flex-pack:justify;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;}
+.r-gg6oyi{font-family:gitbook-content-font,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;}
+.r-1b43r93{font-size:14px;}
+.r-16dba41{font-weight:400;}
+.r-hbpseb{line-height:22px;}
+.r-1472mwg{height:24px;}
+.r-7xmw5f{width:-webkit-fit-content;width:-moz-fit-content;width:fit-content;}
+.r-1enofrn{font-size:12px;}
+.r-1kfrs79{font-weight:600;}
+.r-19r33im{letter-spacing:1.2px;}
+.r-14yzgew{line-height:18px;}
+.r-tsynxw{text-transform:uppercase;}
+.r-1ghhsy9{color:rgba(52,109,219,1.00);}
+.r-mabqd8{height:32px;}
+.r-1yvhtrz{width:32px;}
+.r-k200y{-ms-flex-item-align:start;-webkit-align-self:flex-start;align-self:flex-start;}
+.r-18ayb63{border-right-color:rgba(227,232,237,1.00);}
+.r-13l2t4g{border-right-width:1px;}
+.r-12dqhl9{height:calc(100vh - 80px);}
+.r-1rnoaur{overflow-y:auto;}
+.r-1fo40xd{top:80px;}
+.r-1ipicw7{width:300px;}
+.r-sga3zk{height:64px;}
+.r-1kihuf0{-ms-flex-item-align:center;-ms-grid-row-align:center;-webkit-align-self:center;align-self:center;}
+.r-150rngu{-webkit-overflow-scrolling:touch;}
+.r-11yh6sk{overflow-x:hidden;}
+.r-1sncvnh{-webkit-transform:translateZ(0px);transform:translateZ(0px);}
+.r-1sc18lr{padding-bottom:88px;}
+.r-1p0dtai{bottom:0px;}
+.r-u8s1d{position:absolute;}
+.r-10ptun7{height:16px;}
+.r-1l7z4oj{padding-bottom:16px;}
+.r-1b00too{background-color:rgba(236,239,241,1.00);}
+.r-1rasi3h{color:rgba(136,153,168,1.00);}
+.r-b88u0q{font-weight:700;}
+.r-1l5ssaz{max-width:910px;}
+.r-1ygmrgt{padding-top:24px;}
+.r-1peese0{margin-bottom:24px;}
+.r-1xnzce8{-moz-user-select:-webkit-text;-moz-user-select:text;-ms-user-select:-webkit-text;-ms-user-select:text;-webkit-user-select:-webkit-text;-webkit-user-select:text;user-select:-webkit-text;user-select:text;}
+.r-1nf4jbm{color:rgba(59,69,78,1.00);}
+.r-1wzrnnt{margin-top:16px;}
+.r-adyw6z{font-size:20px;}
+.r-17rnw9f{line-height:30px;}
+.r-95jzfe{padding-top:16px;}
+.r-tskmnb{padding-top:8px;}
+.r-xd6kpl{padding-bottom:8px;}
+.r-ubezar{font-size:16px;}
+.r-135wba7{line-height:24px;}
+.r-fdjqy7{text-align:left;}
+.r-11c0sde{margin-top:24px;}
+.r-1yv4afn{border-top-color:rgba(227,232,237,1.00);}
+.r-5kkj8d{border-top-width:1px;}
+.r-icyqz7{max-height:calc(100vh - 88px);}
+.r-1mkpi1y{max-width:max(50%, 300px);}
+.r-hu79xy{min-width:196px;}
+.r-wk8lta{padding-top:0px;}
+.r-1mdbw0j{padding-bottom:0px;}
+.r-dnmrzs{max-width:100%;}
+.r-1niwhzg{background-color:rgba(0,0,0,0.00);}
+.r-vvn4in{background-position:center;}
+.r-u6sd8q{background-repeat:no-repeat;}
+.r-4gszlv{background-size:cover;}
+.r-1pi2tsx{height:100%;}
+.r-1d2f490{left:0px;}
+.r-zchlnj{right:0px;}
+.r-1wyyakw{z-index:-1;}
+.r-ehq7j7{background-size:contain;}
+.r-q4m81j{text-align:center;}
+.r-6wscbn{max-width:252px;}
+.r-1h0z5md{-ms-flex-pack:start;-webkit-box-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;}
+.r-1l94q7l{box-shadow:inset 0px 0px 1px rgb(0 0 0 / 30%);}
+.r-88pszg{margin-right:16px;}
+.r-1q9jyb7{-webkit-filter:blur(16px) contrast(110%) hue-rotate(10deg) brightness(1.2) saturate(1.2);filter:blur(16px) contrast(110%) hue-rotate(10deg) brightness(1.2) saturate(1.2);}
+.r-1oec5bt{opacity:0.2;}
+.r-1ceczpf{min-height:24px;}
+.r-15zivkp{margin-bottom:4px;}
+.r-11wrixw{margin-left:0px;}
+.r-1clhhh9{-moz-transition-property:all;-webkit-transition-property:all;transition-property:all;}
+.r-obd0qt{-ms-flex-align:end;-webkit-align-items:flex-end;-webkit-box-align:end;align-items:flex-end;}
+.r-majxgm{font-weight:500;}
+.r-1ow6zhx{margin-left:16px;}
+[stylesheet-group="10"]{}
+[data-rnw-media-class="4613__4614"]{ height:80px;}
+@media (max-width: 700px) and (max-width: 9999999.52544951959552544952px) { [data-rnw-media-class="4613__4614"] { height:64px;} }
+[data-rnw-media-class="visible__hidden"]{display: none;}
+@media (max-width: 700px) and (max-width: 9999999.118105115105981081019595104105100100101110px) { [data-rnw-media-class="visible__hidden"] {display: flex;} }
+@media (max-width: 700px) and (max-width: 9999999.1041051001001011109595px) { [data-rnw-media-class="hidden__"] {display: none;} }
+[data-rnw-media-class="hidden__visible"]{display: flex;}
+@media (max-width: 700px) and (max-width: 9999999.104105100100101110959511810511510598108101px) { [data-rnw-media-class="hidden__visible"] {display: none;} }
+[data-rnw-media-class="188__187"]{ -ms-flex-direction:row;-webkit-box-direction:normal;-webkit-box-orient:horizontal;-webkit-flex-direction:row;flex-direction:row;}
+@media (max-width: 700px) and (max-width: 9999999.4956569595495655px) { [data-rnw-media-class="188__187"] { -ms-flex-direction:column;-webkit-box-direction:normal;-webkit-box-orient:vertical;-webkit-flex-direction:column;flex-direction:column;} }
+[data-rnw-media-class="hidden__visible_b1430-visible"]{display: flex;}
+@media (max-width: 1430px) and (max-width: 9999999.1041051001001011109595118105115105981081019598495251484511810511510598108101px) { [data-rnw-media-class="hidden__visible_b1430-visible"] {display: flex;} }
+@media (max-width: 700px) and (max-width: 9999999.1041051001001011109595118105115105981081019598495251484511810511510598108101px) { [data-rnw-media-class="hidden__visible_b1430-visible"] {display: none;} }
+[data-rnw-media-class="4351__4350_b1430-196"]{ padding-right:80px;}
+@media (max-width: 1430px) and (max-width: 9999999.5251534995955251534895984952514845495754px) { [data-rnw-media-class="4351__4350_b1430-196"] { -ms-flex-pack:center;-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center;} }
+@media (max-width: 700px) and (max-width: 9999999.5251534995955251534895984952514845495754px) { [data-rnw-media-class="4351__4350_b1430-196"] { padding-right:16px;} }
+[data-rnw-media-class="4314__4315"]{ height:48px;width:80px;}
+@media (max-width: 700px) and (max-width: 9999999.52514952959552514953px) { [data-rnw-media-class="4314__4315"] { height:40px;min-width:16px;width:auto;} }
+[data-rnw-media-class="236__235"]{ font-family:gitbook-content-font,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;font-size:40px;font-weight:700;line-height:48px;}
+@media (max-width: 700px) and (max-width: 9999999.5051549595505153px) { [data-rnw-media-class="236__235"] { font-family:gitbook-content-font,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;font-size:32px;font-weight:700;line-height:40px;} }
+[data-rnw-media-class="visible__hidden_b1430-visible"]{display: none;}
+@media (max-width: 1430px) and (max-width: 9999999.1181051151059810810195951041051001001011109598495251484511810511510598108101px) { [data-rnw-media-class="visible__hidden_b1430-visible"] {display: flex;} }
+@media (max-width: 700px) and (max-width: 9999999.1181051151059810810195951041051001001011109598495251484511810511510598108101px) { [data-rnw-media-class="visible__hidden_b1430-visible"] {display: flex;} }
+[data-rnw-media-class="4317__4316"]{ margin-left:80px;}
+@media (max-width: 700px) and (max-width: 9999999.52514955959552514954px) { [data-rnw-media-class="4317__4316"] { margin-left:16px;} }
+[data-rnw-media-class="__127"]{ padding-bottom:40px;}
+[data-rnw-media-class="4228-196__4226-_b1430-196"]{ padding-right:80px;}
+@media (max-width: 1430px) and (max-width: 9999999.52505056454957549595525050544595984952514845495754px) { [data-rnw-media-class="4228-196__4226-_b1430-196"] { -ms-flex-pack:center;-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center;} }
+@media (max-width: 700px) and (max-width: 9999999.52505056454957549595525050544595984952514845495754px) { [data-rnw-media-class="4228-196__4226-_b1430-196"] { -ms-flex-pack:center;-webkit-box-pack:center;-webkit-justify-content:center;justify-content:center;padding-right:16px;} }
+[data-rnw-media-class="4227-__4225"]{ margin-left:80px;}
+@media (max-width: 700px) and (max-width: 9999999.5250505545959552505053px) { [data-rnw-media-class="4227-__4225"] { margin-left:16px;} }
+[data-rnw-media-class="4354__4353"]{ margin-left:80px;}
+@media (max-width: 700px) and (max-width: 9999999.52515352959552515351px) { [data-rnw-media-class="4354__4353"] { margin-left:16px;} }
+[data-rnw-media-class="_188_187"]{ -ms-flex-direction:row;-webkit-box-direction:normal;-webkit-box-orient:horizontal;-webkit-flex-direction:row;flex-direction:row;}
+@media (max-width: 1024px) and (max-width: 9999999.9549565695495655px) { [data-rnw-media-class="_188_187"] { -ms-flex-direction:column;-webkit-box-direction:normal;-webkit-box-orient:vertical;-webkit-flex-direction:column;flex-direction:column;} }
+@media (max-width: 1024px) and (max-width: 9999999.9549545095px) { [data-rnw-media-class="_162_"] { margin-bottom:16px;} }
+[data-rnw-media-class="hidden__1kbfcbz_b1430-hidden"]{ width:max(220px, calc(100vw - max(300px, calc((100vw - 910px) / 2 - 0px)) - 750px - 80px - 80px - 0px));}
+@media (max-width: 1430px) and (max-width: 9999999.10410510010010111095954910798102999812295984952514845104105100100101110px) { [data-rnw-media-class="hidden__1kbfcbz_b1430-hidden"] {display: none;} }
+@media (max-width: 700px) and (max-width: 9999999.10410510010010111095954910798102999812295984952514845104105100100101110px) { [data-rnw-media-class="hidden__1kbfcbz_b1430-hidden"] {display: none;} }
+[data-rnw-media-class="4608-90-111-204-197-__4608-112-118-197"]{ -ms-flex-pack:start;-webkit-box-pack:start;-webkit-justify-content:flex-start;justify-content:flex-start;padding-left:16px;padding-right:24px;width:auto;}
+@media (max-width: 700px) and (max-width: 9999999.5254485645574845494949455048524549575545959552544856454949504549495645495755px) { [data-rnw-media-class="4608-90-111-204-197-__4608-112-118-197"] { -ms-flex-negative:1;-ms-flex-pack:start;-webkit-box-pack:start;-webkit-flex-shrink:1;-webkit-justify-content:flex-start;flex-shrink:1;justify-content:flex-start;padding-left:0px;padding-right:16px;width:auto;} }
+[data-rnw-media-class="239__238"]{ font-family:gitbook-content-font,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;font-size:20px;font-weight:700;line-height:24px;}
+@media (max-width: 700px) and (max-width: 9999999.5051579595505156px) { [data-rnw-media-class="239__238"] { font-family:gitbook-content-font,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;font-size:16px;font-weight:600;line-height:24px;} }
+[data-rnw-media-class="4397__4398"]{ border-right-width:0px;}
+@media (max-width: 700px) and (max-width: 9999999.52515755959552515756px) { [data-rnw-media-class="4397__4398"] { border-right-width:1px;} }
+[data-rnw-media-class="__187_b910-188"]{ -ms-flex-direction:row;-webkit-box-direction:normal;-webkit-box-orient:horizontal;-webkit-flex-direction:row;flex-direction:row;}
+@media (max-width: 910px) and (max-width: 9999999.9595495655959857494845495656px) { [data-rnw-media-class="__187_b910-188"] { -ms-flex-direction:column;-webkit-box-direction:normal;-webkit-box-orient:vertical;-webkit-flex-direction:column;flex-direction:column;} }
+[data-rnw-media-class="__153_b910-140-155"]{ margin-right:8px;}
+@media (max-width: 910px) and (max-width: 9999999.959549535195985749484549524845495353px) { [data-rnw-media-class="__153_b910-140-155"] { margin-bottom:8px;margin-right:0px;} }
+[data-rnw-media-class="__154_b910-139-156"]{ margin-left:8px;}
+@media (max-width: 910px) and (max-width: 9999999.959549535295985749484549515745495354px) { [data-rnw-media-class="__154_b910-139-156"] { margin-left:0px;margin-top:8px;} }
+[stylesheet-group="20"]{}
+body:not(.dragging) [data-rnw-int-class="button___1827_"]:hover , body:not(.dragging) [data-rnw-int-class="button___1827_"]:focus { background-color:rgba(245,247,249,1.00);}
+body:not(.dragging) [data-rnw-int-class="button___1827_"]:focus:not(:focus-visible) { outline: none; }
+body:not(.dragging) [data-rnw-int-class="button___1827_"]:focus-visible { outline-color:#2662d7;outline-offset:0px;outline-style:auto;outline-width:2px;}
+body:not(.dragging) [data-rnw-int-class="button___1827_"]:hover [data-rnw-int-class="nearest___1835_"], body:not(.dragging) [data-rnw-int-class="button___1827_"]:focus [data-rnw-int-class="nearest___1835_"]{ color:rgba(92,105,117,1.00);}
+body:not(.dragging) [data-rnw-int-class="nearest___4377_"]:hover , body:not(.dragging) [data-rnw-int-class="nearest___4377_"]:focus { border-bottom-color:rgba(227,232,237,1.00);border-left-color:rgba(227,232,237,1.00);border-right-color:rgba(227,232,237,1.00);border-top-color:rgba(227,232,237,1.00);}
+body:not(.dragging) [data-rnw-int-class="nearest___4377_"]:focus:not(:focus-visible) { outline: none; }
+body:not(.dragging) [data-rnw-int-class="nearest___4377_"]:focus-visible { outline-color:#2662d7;outline-offset:0px;outline-style:auto;outline-width:2px;}
+body:not(.dragging) [data-rnw-int-class="nearest___4377_"]:hover [data-rnw-int-class="nearest___258_"], body:not(.dragging) [data-rnw-int-class="nearest___4377_"]:focus [data-rnw-int-class="nearest___258_"]{ color:rgba(59,69,78,1.00);}
+body:not(.dragging) [data-rnw-int-class="button___1438_"]:focus:not(:focus-visible) { outline: none; }
+body:not(.dragging) [data-rnw-int-class="button___1438_"]:focus-visible { outline-color:#2662d7;outline-offset:0px;outline-style:auto;outline-width:2px;}
+body:not(.dragging) [data-rnw-int-class="button___1438_"]:hover [data-rnw-int-class="nearest___1439-16369_"], body:not(.dragging) [data-rnw-int-class="button___1438_"]:focus [data-rnw-int-class="nearest___1439-16369_"]{ color:rgba(52,109,219,1.00);}
+body:not(.dragging) [data-rnw-int-class="nearest___354-16394_"]:hover , body:not(.dragging) [data-rnw-int-class="nearest___354-16394_"]:focus { color:rgba(52,109,219,1.00);}
+body:not(.dragging) [data-rnw-int-class="nearest___354-16394_"]:focus:not(:focus-visible) { outline: none; }
+body:not(.dragging) [data-rnw-int-class="nearest___354-16394_"]:focus-visible { outline-color:#2662d7;outline-offset:0px;outline-style:auto;outline-width:2px;}
+body:not(.dragging) [data-rnw-int-class="nearest___354-16394_"]:hover [data-rnw-int-class="nearest___354-16394_"], body:not(.dragging) [data-rnw-int-class="nearest___354-16394_"]:focus [data-rnw-int-class="nearest___354-16394_"]{ color:rgba(52,109,219,1.00);}
+body:not(.dragging) [data-rnw-int-class="nearest____"]:focus:not(:focus-visible) { outline: none; }
+body:not(.dragging) [data-rnw-int-class="nearest____"]:focus-visible { outline-color:#2662d7;outline-offset:0px;outline-style:auto;outline-width:2px;}
+body:not(.dragging) [data-rnw-int-class="nearest____"]:hover [data-rnw-int-class="nearest___354-16338_"], body:not(.dragging) [data-rnw-int-class="nearest____"]:focus [data-rnw-int-class="nearest___354-16338_"]{ color:rgba(52,109,219,1.00);}
+[data-rnw-int-class="nearest_258__354-16338_"]{ color:rgba(59,69,78,1.00);}
+body:not(.dragging) [data-rnw-int-class="nearest____"]:hover [data-rnw-int-class="nearest_258__354-16338_"], body:not(.dragging) [data-rnw-int-class="nearest____"]:focus [data-rnw-int-class="nearest_258__354-16338_"]{ color:rgba(52,109,219,1.00);}
+body:not(.dragging) [data-rnw-int-class="nearest__4399__"]:hover { background-color:rgba(236,239,241,1.00);}
+body:not(.dragging) [data-rnw-int-class="nearest__4399__"]:focus:not(:focus-visible) { outline: none; }
+body:not(.dragging) [data-rnw-int-class="nearest__4399__"]:focus-visible { outline-color:#2662d7;outline-offset:0px;outline-style:auto;outline-width:2px;}
+body:not(.dragging) [data-rnw-int-class="BaseCard__2181-__2173-16457-"]:hover { -webkit-transform:translateY(-2px);box-shadow:0px 12px 13px rgba(0,0,0,0.02);transform:translateY(-2px);}
+body:not(.dragging) [data-rnw-int-class="BaseCard__2181-__2173-16457-"]:focus { border-bottom-color:rgba(52,109,219,1.00);border-left-color:rgba(52,109,219,1.00);border-right-color:rgba(52,109,219,1.00);border-top-color:rgba(52,109,219,1.00);}
+body:not(.dragging) [data-rnw-int-class="BaseCard__2181-__2173-16457-"]:focus:not(:focus-visible) { outline: none; }
+body:not(.dragging) [data-rnw-int-class="BaseCard__2181-__2173-16457-"]:focus-visible { outline-color:#2662d7;outline-offset:0px;outline-style:auto;outline-width:2px;}
+body:not(.dragging) [data-rnw-int-class="BaseCard__2181-__2173-16457-"]:hover [data-rnw-int-class="nearest__354-16338__"]{ color:rgba(52,109,219,1.00);}
+body:not(.dragging) [data-rnw-int-class="BaseCard__2181-__2173-16457-"]:hover [data-rnw-int-class="nearest___354-16338_"], body:not(.dragging) [data-rnw-int-class="BaseCard__2181-__2173-16457-"]:focus [data-rnw-int-class="nearest___354-16338_"]{ color:rgba(52,109,219,1.00);}</style>
+                <style>
+                    html,
+                    body {
+                        -webkit-font-smoothing: antialiased;
+                        text-rendering: optimizelegibility;
+                        width: 100%;
+                        min-height: 100vh;
+                        user-select: none;
+                        outline: none;
+                        position: relative;
+                    }
+                    /* Avoid Chrome to see Safari hack */
+                    @supports (-webkit-touch-callout: none) {
+                        html,
+                        body,
+                        .gitbook-root {
+                            /* The hack for Safari */
+                            min-height: -webkit-fill-available;
+                        }
+                    }
+                    .gitbook-root {
+                        display: flex;
+                        min-height: 100vh;
+                    }
+                </style>
+            
+        <script type="text/javascript" defer="defer" src="Report%20-%20Lab-3_files/embed.js" async=""></script>
+        <script type="text/javascript" defer="defer" src="Report%20-%20Lab-3_files/polyfill.js" crossorigin="anonymous"></script>
+    <style id="iframely-styles" type="text/css">.iframely-responsive{top:0;left:0;width:100%;height:0;position:relative;padding-bottom:56.25%;box-sizing:border-box;}.iframely-responsive>*{top:0;left:0;width:100%;height:100%;position:absolute;border:0;box-sizing:border-box;}</style></head>
+    <body>
+        <div class="gitbook-root"><div class="css-1dbjc4n r-13awgt0 r-12vffkv" data-reactroot=""><div class="css-1dbjc4n r-13awgt0 r-12vffkv"><header data-rnw-media-class="3951__3952" class="r-1awozwy r-14lw9ot r-nzcix3 r-qklmqi r-1xc7w19 r-1phboty r-1yadl64 r-deolkf r-6koalj r-1mlwlqe r-18u37iz r-1q142lx r-crgep1 r-ifefl9 r-bcqeeo r-t60dpp r-gtdqiz r-ipm5af r-184en5c"><div class="css-1dbjc4n r-1awozwy r-6koalj r-18u37iz r-1jgb5lz r-ty80ws r-1pn2ns4 r-13qz1uu"><a href="https://devtools-4.gitbook.io/lab-3/" aria-label="Lab-3" data-rnw-int-class="nearest____" data-rnw-media-class="3946-90-111-204-197-__3946-112-118-197" class="css-4rbku5 css-1dbjc4n r-1awozwy r-1loqt21 r-18u37iz r-1otgn73 r-eafdt9 r-1i6wzkk r-lrvibr" data-testid="public.headerHomeLink"><div class="css-1dbjc4n r-1awozwy r-1ro0kt6 r-18u37iz r-16y2uox r-1wbh5a2 r-1h0z5md r-6wscbn"><div class="css-1dbjc4n"><div data-rnw-media-class="hidden__visible" class="css-1dbjc4n"><div class="css-1dbjc4n r-1awozwy r-14lw9ot r-z2wwpe r-1l94q7l r-18u37iz r-eu3ka r-1777fci r-88pszg r-1udh08x r-1aockid" style=""><div class="css-1dbjc4n r-4qtqp9 r-1q9jyb7 r-1oec5bt r-u8s1d" style="height: 80px; width: 80px;"><span class="emj-people _1f97c" role="img" title="lab coat" aria-label="lab coat" style="transform: translate(-50%, -50%) scale(1.25);">🥼</span></div><div class="css-1dbjc4n r-4qtqp9 r-bnwqim" style="height: 28.16px; width: 28.16px;"><span class="emj-people _1f97c" role="img" title="lab coat" aria-label="lab coat" style="transform: translate(-50%, -50%) scale(0.44);">🥼</span></div></div></div></div><div dir="auto" data-rnw-media-class="239__238" class="css-901oao r-1udh08x"><span data-rnw-int-class="nearest_258__354-4012_" class="css-901oao css-16my406 css-vcwn7f">Lab-3</span></div></div></a><div data-rnw-media-class="hidden__" class="css-1dbjc4n r-1awozwy r-1ro0kt6 r-18u37iz r-16y2uox r-1wbh5a2 r-17s6mgv r-1qhn6m8"></div><div data-rnw-media-class="hidden__visible" class="css-1dbjc4n r-1ro0kt6 r-16y2uox r-1wbh5a2 r-1jj8364 r-16vg0q1 r-puj83k r-1pyaxff"><div aria-label="Search…" data-rnw-int-class="nearest___3715_" tabindex="0" class="css-1dbjc4n r-1awozwy r-42olwf r-kdyh1x r-rs99b7 r-1loqt21 r-18u37iz r-eu3ka r-1wtj0ep r-1qhn6m8 r-1pyaxff r-1otgn73 r-eafdt9 r-1i6wzkk r-lrvibr r-13qz1uu" style="background-color: rgba(0, 0, 0, 0.05);"><div class="css-1dbjc4n r-1awozwy r-18u37iz"><svg viewBox="0 0 24 24" fill="none" preserveAspectRatio="xMidYMid meet" class="r-1bnj018 r-1kb76zh" style="height: 14px; vertical-align: middle; width: 14px;"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 4a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM2 10.5a8.5 8.5 0 1117 0 8.5 8.5 0 01-17 0z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M15.093 15.093a1 1 0 011.414 0l5.2 5.2a1 1 0 01-1.414 1.414l-5.2-5.2a1 1 0 010-1.414z" fill="currentColor"></path></svg><div dir="auto" data-rnw-int-class="nearest___258_" class="css-901oao r-1bnj018 r-gg6oyi r-1b43r93 r-16dba41 r-hbpseb">Search…</div></div><div class="css-1dbjc4n"><div class="css-1dbjc4n r-1awozwy r-14lw9ot r-z2wwpe r-18u37iz r-1472mwg r-s1qlax r-7xmw5f"><div dir="auto" class="css-901oao r-1ghhsy9 r-gg6oyi r-1enofrn r-1kfrs79 r-19r33im r-14yzgew r-tsynxw">⌃K</div></div></div></div></div></div></header><div data-rnw-media-class="188__187" class="css-1dbjc4n r-1ro0kt6 r-16y2uox r-1wbh5a2"><div data-rnw-media-class="hidden__visible_b1430-visible" class="css-1dbjc4n r-k200y r-14lw9ot r-18ayb63 r-13l2t4g r-18u37iz r-12dqhl9 r-17s6mgv r-1rnoaur r-gtdqiz r-1fo40xd" style="width: max(300px, -455px + 50vw);" data-testid="page.desktopTableOfContents"><nav aria-label="Table of contents" class="r-1oszu61 r-1xc7w19 r-1phboty r-1yadl64 r-deolkf r-6koalj r-1mlwlqe r-eqz5dr r-1q142lx r-crgep1 r-ifefl9 r-bcqeeo r-t60dpp r-bnwqim r-1ipicw7 r-417010"><div class="css-1dbjc4n r-1ro0kt6 r-16y2uox r-1wbh5a2 r-puj83k"><div class="css-1dbjc4n r-150rngu r-1ro0kt6 r-eqz5dr r-16y2uox r-1wbh5a2 r-11yh6sk r-1rnoaur r-1sncvnh"><div class="css-1dbjc4n r-1sc18lr r-1yzf0co"><div class="css-1dbjc4n r-1r5su4o"><div data-rnw-int-class="nearest____" data-rnw-media-class="3735__3736" class="css-1dbjc4n r-1awozwy r-42olwf r-z2wwpe r-rs99b7 r-18u37iz r-15zivkp r-1kb76zh r-1ceczpf r-1pn2ns4"><div dir="auto" class="css-901oao r-1rasi3h r-1ro0kt6 r-16y2uox r-1wbh5a2 r-gg6oyi r-1enofrn r-1kfrs79 r-19r33im r-14yzgew r-oyd9sg r-tsynxw">Description</div></div><div class="css-1dbjc4n r-11wrixw r-bnwqim"><div class="css-1dbjc4n"><div class="css-1dbjc4n"><a href="https://devtools-4.gitbook.io/lab-3/description/main" data-rnw-media-class="3735__3736" data-rnw-int-class="nearest__3737__" class="css-4rbku5 css-1dbjc4n r-1awozwy r-42olwf r-z2wwpe r-rs99b7 r-1loqt21 r-18u37iz r-1kb76zh r-1ceczpf r-1pn2ns4 r-1otgn73 r-eafdt9 r-1i6wzkk r-lrvibr"><div dir="auto" class="css-901oao r-1bnj018 r-1ro0kt6 r-16y2uox r-1wbh5a2 r-gg6oyi r-1b43r93 r-16dba41 r-hbpseb r-oyd9sg">Main</div></a></div></div></div></div><div class="css-1dbjc4n r-1r5su4o"><div data-rnw-int-class="nearest____" data-rnw-media-class="3735__3736" class="css-1dbjc4n r-1awozwy r-42olwf r-z2wwpe r-rs99b7 r-18u37iz r-1kb76zh r-1ceczpf r-1pn2ns4"><div dir="auto" class="css-901oao r-1rasi3h r-1ro0kt6 r-16y2uox r-1wbh5a2 r-gg6oyi r-1enofrn r-1kfrs79 r-19r33im r-14yzgew r-oyd9sg r-tsynxw">Progress</div></div><div class="css-1dbjc4n r-11wrixw r-bnwqim"><div class="css-1dbjc4n"><div class="css-1dbjc4n"><a href="https://devtools-4.gitbook.io/lab-3/progress/project-selection" data-rnw-media-class="3735__3736" data-rnw-int-class="nearest__3737__" class="css-4rbku5 css-1dbjc4n r-1awozwy r-42olwf r-z2wwpe r-rs99b7 r-1loqt21 r-18u37iz r-15zivkp r-1kb76zh r-1ceczpf r-1pn2ns4 r-1otgn73 r-eafdt9 r-1i6wzkk r-lrvibr"><div dir="auto" class="css-901oao r-1bnj018 r-1ro0kt6 r-16y2uox r-1wbh5a2 r-gg6oyi r-1b43r93 r-16dba41 r-hbpseb r-oyd9sg">Project selection</div></a></div></div><div class="css-1dbjc4n"><div class="css-1dbjc4n"><a href="https://devtools-4.gitbook.io/lab-3/progress/lifecycle" data-rnw-media-class="3735__3736" data-rnw-int-class="nearest__3737__" class="css-4rbku5 css-1dbjc4n r-1awozwy r-42olwf r-z2wwpe r-rs99b7 r-1loqt21 r-18u37iz r-15zivkp r-1kb76zh r-1ceczpf r-1pn2ns4 r-1otgn73 r-eafdt9 r-1i6wzkk r-lrvibr"><div dir="auto" class="css-901oao r-1bnj018 r-1ro0kt6 r-16y2uox r-1wbh5a2 r-gg6oyi r-1b43r93 r-16dba41 r-hbpseb r-oyd9sg">Lifecycle</div></a></div></div><div class="css-1dbjc4n"><div class="css-1dbjc4n"><a href="https://devtools-4.gitbook.io/lab-3/progress/vcs-integration" data-rnw-media-class="3735__3736" data-rnw-int-class="nearest__3737__" class="css-4rbku5 css-1dbjc4n r-1awozwy r-42olwf r-z2wwpe r-rs99b7 r-1loqt21 r-18u37iz r-15zivkp r-1kb76zh r-1ceczpf r-1pn2ns4 r-1otgn73 r-1i6wzkk r-lrvibr" style="transition-duration: 0.25s;"><div dir="auto" class="css-901oao r-1bnj018 r-1ro0kt6 r-16y2uox r-1wbh5a2 r-gg6oyi r-1b43r93 r-16dba41 r-hbpseb r-oyd9sg">VCS integration</div></a></div></div><div class="css-1dbjc4n"><div class="css-1dbjc4n"><a href="https://devtools-4.gitbook.io/lab-3/progress/adding-tasks" data-rnw-media-class="3735__3736" data-rnw-int-class="nearest__3737__" class="css-4rbku5 css-1dbjc4n r-1awozwy r-42olwf r-z2wwpe r-rs99b7 r-1loqt21 r-18u37iz r-15zivkp r-1kb76zh r-1ceczpf r-1pn2ns4 r-1otgn73 r-1i6wzkk r-lrvibr" style="transition-duration: 0.25s;"><div dir="auto" class="css-901oao r-1bnj018 r-1ro0kt6 r-16y2uox r-1wbh5a2 r-gg6oyi r-1b43r93 r-16dba41 r-hbpseb r-oyd9sg">Adding tasks</div></a></div></div><div class="css-1dbjc4n"><div class="css-1dbjc4n"><a href="https://devtools-4.gitbook.io/lab-3/progress/board-management" data-rnw-media-class="3735__3736" data-rnw-int-class="nearest__3737__" class="css-4rbku5 css-1dbjc4n r-1awozwy r-42olwf r-z2wwpe r-rs99b7 r-1loqt21 r-18u37iz r-15zivkp r-1kb76zh r-1ceczpf r-1pn2ns4 r-1otgn73 r-1i6wzkk r-lrvibr" style="transition-duration: 0.25s;"><div dir="auto" class="css-901oao r-1bnj018 r-1ro0kt6 r-16y2uox r-1wbh5a2 r-gg6oyi r-1b43r93 r-16dba41 r-hbpseb r-oyd9sg">Board management</div></a></div></div><div class="css-1dbjc4n"><div class="css-1dbjc4n"><a href="https://devtools-4.gitbook.io/lab-3/progress/documentation" data-rnw-media-class="3735__3736" data-rnw-int-class="nearest__3737__" class="css-4rbku5 css-1dbjc4n r-1awozwy r-42olwf r-z2wwpe r-rs99b7 r-1loqt21 r-18u37iz r-15zivkp r-1kb76zh r-1ceczpf r-1pn2ns4 r-1otgn73 r-1i6wzkk r-lrvibr" style="transition-duration: 0.25s;"><div dir="auto" class="css-901oao r-1bnj018 r-1ro0kt6 r-16y2uox r-1wbh5a2 r-gg6oyi r-1b43r93 r-16dba41 r-hbpseb r-oyd9sg">Documentation</div></a></div></div><div class="css-1dbjc4n"><div class="css-1dbjc4n"><a href="https://devtools-4.gitbook.io/lab-3/progress/visibility-setting" data-rnw-media-class="3735__3736" data-rnw-int-class="nearest__3737__" class="css-4rbku5 css-1dbjc4n r-1awozwy r-42olwf r-z2wwpe r-rs99b7 r-1loqt21 r-18u37iz r-15zivkp r-1kb76zh r-1ceczpf r-1pn2ns4 r-1otgn73 r-1i6wzkk r-lrvibr" style="transition-duration: 0.25s;"><div dir="auto" class="css-901oao r-1bnj018 r-1ro0kt6 r-16y2uox r-1wbh5a2 r-gg6oyi r-1b43r93 r-16dba41 r-hbpseb r-oyd9sg">Visibility setting</div></a></div></div><div class="css-1dbjc4n"><div class="css-1dbjc4n"><a href="https://devtools-4.gitbook.io/lab-3/progress/technical-documentation" data-rnw-media-class="3735__3736" data-rnw-int-class="nearest__3737__" class="css-4rbku5 css-1dbjc4n r-1awozwy r-42olwf r-z2wwpe r-rs99b7 r-1loqt21 r-18u37iz r-15zivkp r-1kb76zh r-1ceczpf r-1pn2ns4 r-1otgn73 r-1i6wzkk r-lrvibr" style="transition-duration: 0.25s;"><div dir="auto" class="css-901oao r-1bnj018 r-1ro0kt6 r-16y2uox r-1wbh5a2 r-gg6oyi r-1b43r93 r-16dba41 r-hbpseb r-oyd9sg">Technical documentation</div></a></div></div><div class="css-1dbjc4n"><div class="css-1dbjc4n"><a href="https://devtools-4.gitbook.io/lab-3/progress/report" data-rnw-media-class="3735__3736" data-rnw-int-class="nearest____" class="css-4rbku5 css-1dbjc4n r-1awozwy r-42olwf r-z2wwpe r-rs99b7 r-1loqt21 r-18u37iz r-1kb76zh r-1ceczpf r-1pn2ns4 r-1otgn73 r-1i6wzkk r-lrvibr" style="background-color: rgba(133, 163, 224, 0.1); transition-duration: 0.25s;"><div dir="auto" class="css-901oao r-1ghhsy9 r-1ro0kt6 r-16y2uox r-1wbh5a2 r-gg6oyi r-1b43r93 r-b88u0q r-hbpseb r-oyd9sg">Report</div></a></div></div></div></div></div></div></div><div class="css-1dbjc4n r-1p0dtai r-u8s1d r-13qz1uu r-184en5c"><div class="css-1dbjc4n r-10ptun7" style="background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(255, 255, 255));"></div><div class="css-1dbjc4n r-14lw9ot r-1l7z4oj r-ymttw5"><a href="https://www.gitbook.com/?utm_source=content&amp;utm_medium=trademark&amp;utm_campaign=88GZRmcqzcxgcn6et6Qz&amp;powered-by=DevTools" data-rnw-int-class="nearest___354-4068_" class="css-4rbku5 css-1dbjc4n r-1awozwy r-1b00too r-1xfd6ze r-1loqt21 r-18u37iz r-ymttw5 r-5njf8e r-1otgn73 r-eafdt9 r-1i6wzkk r-lrvibr"><svg viewBox="0 0 1000 1000" fill="none" preserveAspectRatio="xMidYMid meet" data-rnw-int-class="nearest___354-4068_" class="r-1rasi3h r-eu3ka r-1aockid" style="vertical-align: middle;"><path fill-rule="evenodd" clip-rule="evenodd" d="M562.168 159.724l325.95 162.727c15.062 7.519 15.298 28.898.404 36.746L465.19 582.283a82.875 82.875 0 01-75.639.83L123.74 450.409c-32.376-12.972-68.568 10.748-68.568 46.474 0 28.728 16.256 54.991 41.99 67.839l266.48 133.036c16.267-16.537 38.918-26.795 63.967-26.795 24.334 0 46.404 9.68 62.558 25.394L822.075 521.45a89.893 89.893 0 01-1.385-15.755c0-49.44 40.14-89.519 89.655-89.519S1000 456.255 1000 505.695c0 49.439-40.14 89.518-89.655 89.518-24.21 0-46.178-9.581-62.31-25.153L515.94 745.065a90.036 90.036 0 011.324 15.417c0 49.439-40.14 89.518-89.655 89.518s-89.655-40.079-89.655-89.518c0-4.572.343-9.063 1.006-13.451L68.622 612.068C26.566 591.072 0 548.153 0 501.205v-26.15c0-35.755 19.82-68.574 51.49-85.261l435.039-229.24a82.87 82.87 0 0175.639-.83zM427.609 794.912c19.044 0 34.483-15.415 34.483-34.43 0-19.016-15.439-34.431-34.483-34.431-19.044 0-34.482 15.415-34.482 34.431 0 19.015 15.438 34.43 34.482 34.43zm517.219-289.217c0 19.015-15.438 34.43-34.483 34.43-19.044 0-34.482-15.415-34.482-34.43s15.438-34.43 34.482-34.43c19.045 0 34.483 15.415 34.483 34.43z" fill="currentColor"></path></svg><div class="css-1dbjc4n r-1ro0kt6 r-16y2uox r-1wbh5a2 r-1qhn6m8"><div dir="auto" data-rnw-int-class="nearest___354-4068_" class="css-901oao r-1rasi3h r-gg6oyi r-1b43r93 r-16dba41 r-hbpseb">Powered By <span class="css-901oao css-16my406 r-b88u0q">GitBook</span></div></div></a></div></div></nav></div><div class="css-1dbjc4n r-14lw9ot r-13awgt0"><div class="css-1dbjc4n r-1ro0kt6 r-18u37iz r-16y2uox r-1wbh5a2"><div data-rnw-media-class="__" class="css-1dbjc4n r-1ro0kt6 r-18u37iz r-16y2uox r-1wbh5a2 r-1777fci"><main class="r-1oszu61 r-1xc7w19 r-1phboty r-1yadl64 r-deolkf r-6koalj r-1ro0kt6 r-eqz5dr r-16y2uox r-1wbh5a2 r-crgep1 r-ifefl9 r-bcqeeo r-t60dpp r-bnwqim r-417010"><div data-rnw-media-class="3487__3486_b1430-196" class="css-1dbjc4n r-18u37iz r-1777fci"><div class="css-1dbjc4n r-1ro0kt6 r-16y2uox r-1wbh5a2 r-1l5ssaz"><div class="css-1dbjc4n r-eqz5dr r-1peese0 r-1ygmrgt"><div class="css-1dbjc4n r-18u37iz"><div data-rnw-media-class="3450__3451" class="css-1dbjc4n r-1awozwy r-18u37iz r-17s6mgv"></div><div class="css-1dbjc4n r-1ro0kt6 r-16y2uox r-1wbh5a2"><h1 data-rnw-media-class="236__235" class="r-1nf4jbm r-crgep1 r-1xnzce8" data-testid="page.title">Report</h1></div></div><div data-rnw-media-class="3453__3452" class="css-1dbjc4n r-1wzrnnt"><div class="css-1dbjc4n"><div dir="auto" class="css-901oao r-1rasi3h r-gg6oyi r-adyw6z r-16dba41 r-17rnw9f r-1xnzce8">Добавьте в вашу документацию отчёт по каждому пункту работы.</div></div></div><div data-rnw-media-class="3453__3452" class="css-1dbjc4n"></div></div></div></div><div data-rnw-media-class="__127" class="css-1dbjc4n"><div class="css-1dbjc4n r-bnwqim"><div data-testid="page.contentEditor" data-slate-editor="true" data-document-key="14a27b87ad824a329635b95d924d4671" data-key="14a27b87ad824a329635b95d924d4671" autocorrect="on" spellcheck="true" style="outline: none; white-space: pre-wrap; overflow-wrap: break-word;"><div style="contain-intrinsic-size: 0px 40px;"><div class="css-1dbjc4n r-bnwqim"><div data-rnw-media-class="3364-196__3362-_b1430-196" class="css-1dbjc4n r-1ro0kt6 r-18u37iz r-16y2uox r-1wbh5a2 r-1777fci"><div class="css-1dbjc4n r-1ro0kt6 r-16y2uox r-1wbh5a2 r-1l5ssaz"><div data-rnw-media-class="3363-__3361" class="css-1dbjc4n"><div class="css-1dbjc4n"><div data-key="d6e999eee64a4b71840c7c38e358a307" class="r-1oszu61 r-1xc7w19 r-1phboty r-1yadl64 r-deolkf r-6koalj r-1mlwlqe r-eqz5dr r-1q142lx r-crgep1 r-ifefl9 r-bcqeeo r-t60dpp r-xd6kpl r-tskmnb r-1yzf0co r-bnwqim r-417010"><div data-block-content="d6e999eee64a4b71840c7c38e358a307" class="r-1oszu61 r-1xc7w19 r-1phboty r-1yadl64 r-deolkf r-6koalj r-1ro0kt6 r-eqz5dr r-16y2uox r-1wbh5a2 r-crgep1 r-ifefl9 r-bcqeeo r-t60dpp r-bnwqim r-417010"><div dir="auto" class="css-901oao r-1nf4jbm r-gg6oyi r-ubezar r-16dba41 r-135wba7 r-fdjqy7 r-1xnzce8"><span data-key="88bab3141ed54659926dc90a50fc4f5f"><strong data-slate-leaf="true" data-offset-key="88bab3141ed54659926dc90a50fc4f5f:0" class="r-b88u0q r-crgep1">Система ведения проектов:</strong></span></div></div></div></div></div></div></div></div></div><div style="contain-intrinsic-size: 0px 40px;"><div class="css-1dbjc4n r-bnwqim"><div data-rnw-media-class="3364-196__3362-_b1430-196" class="css-1dbjc4n r-1ro0kt6 r-18u37iz r-16y2uox r-1wbh5a2 r-1777fci"><div class="css-1dbjc4n r-1ro0kt6 r-16y2uox r-1wbh5a2 r-1l5ssaz"><div data-rnw-media-class="3363-__3361" class="css-1dbjc4n"><div class="css-1dbjc4n"><div data-key="69066cbf531b4321b61e0baced6bd576" class="r-1oszu61 r-1xc7w19 r-1phboty r-1yadl64 r-deolkf r-6koalj r-1mlwlqe r-eqz5dr r-1q142lx r-crgep1 r-ifefl9 r-bcqeeo r-t60dpp r-xd6kpl r-tskmnb r-1yzf0co r-bnwqim r-417010"><div data-block-content="69066cbf531b4321b61e0baced6bd576" class="r-1oszu61 r-1xc7w19 r-1phboty r-1yadl64 r-deolkf r-6koalj r-1ro0kt6 r-eqz5dr r-16y2uox r-1wbh5a2 r-crgep1 r-ifefl9 r-bcqeeo r-t60dpp r-bnwqim r-417010"><div dir="auto" class="css-901oao r-1nf4jbm r-gg6oyi r-ubezar r-16dba41 r-135wba7 r-fdjqy7 r-1xnzce8"><span data-key="f9370f43ba4343f997a34a554c9cf1b7"><span data-offset-key="f9370f43ba4343f997a34a554c9cf1b7:0">YouTrack</span></span></div></div></div></div></div></div></div></div></div><div style="contain-intrinsic-size: 0px 56px;"><div class="css-1dbjc4n r-bnwqim"><div data-rnw-media-class="3364-196__3362-_b1430-196" class="css-1dbjc4n r-1ro0kt6 r-18u37iz r-16y2uox r-1wbh5a2 r-1777fci"><div class="css-1dbjc4n r-1ro0kt6 r-16y2uox r-1wbh5a2 r-1l5ssaz"><div data-rnw-media-class="3363-__3361" class="css-1dbjc4n"><div class="css-1dbjc4n"><div data-key="ea5b90d6f472479094cb297293ee745b" class="r-1oszu61 r-1xc7w19 r-1phboty r-1yadl64 r-deolkf r-6koalj r-1mlwlqe r-eqz5dr r-1q142lx r-crgep1 r-ifefl9 r-bcqeeo r-t60dpp r-xd6kpl r-1ygmrgt r-1yzf0co r-bnwqim r-417010"><div data-block-content="ea5b90d6f472479094cb297293ee745b" class="r-1oszu61 r-1xc7w19 r-1phboty r-1yadl64 r-deolkf r-6koalj r-1ro0kt6 r-eqz5dr r-16y2uox r-1wbh5a2 r-crgep1 r-ifefl9 r-bcqeeo r-t60dpp r-bnwqim r-417010"><h3 data-rnw-media-class="__" class="r-obd0qt r-1xc7w19 r-1phboty r-1yadl64 r-deolkf r-6koalj r-1mlwlqe r-18u37iz r-1q142lx r-crgep1 r-ifefl9 r-bcqeeo r-t60dpp r-bnwqim r-417010" id="sistema-dokumentirovaniya"><div dir="auto" data-rnw-media-class="213__212" class="css-901oao r-1nf4jbm r-1loqt21 r-fdjqy7 r-1xnzce8" id="text-sistema-dokumentirovaniya"><span data-key="ebb8c359e58d4bc58aad002e7304f050"><strong data-slate-leaf="true" data-offset-key="ebb8c359e58d4bc58aad002e7304f050:0" class="r-b88u0q r-crgep1">Система документирования:</strong></span><a href="#sistema-dokumentirovaniya" aria-label="Direct link to heading" data-rnw-int-class="nearest_274__354-4012_" class="css-4rbku5 css-901oao css-16my406 r-1awozwy r-1loqt21 r-xoduu5 r-1jkjb r-orgf3d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" preserveAspectRatio="xMidYMid meet" class="r-10ptun7" style="vertical-align: middle; width: 16px;"><path d="M4 9h16M4 15h16M10 3L8 21M16 3l-2 18"></path></svg></a></div></h3></div></div></div></div></div></div></div></div><div style="contain-intrinsic-size: 0px 40px;"><div class="css-1dbjc4n r-bnwqim"><div data-rnw-media-class="3364-196__3362-_b1430-196" class="css-1dbjc4n r-1ro0kt6 r-18u37iz r-16y2uox r-1wbh5a2 r-1777fci"><div class="css-1dbjc4n r-1ro0kt6 r-16y2uox r-1wbh5a2 r-1l5ssaz"><div data-rnw-media-class="3363-__3361" class="css-1dbjc4n"><div class="css-1dbjc4n"><div data-key="fdbb756adcb448fab347ee24c630678e" class="r-1oszu61 r-1xc7w19 r-1phboty r-1yadl64 r-deolkf r-6koalj r-1mlwlqe r-eqz5dr r-1q142lx r-crgep1 r-ifefl9 r-bcqeeo r-t60dpp r-xd6kpl r-tskmnb r-1yzf0co r-bnwqim r-417010"><div data-block-content="fdbb756adcb448fab347ee24c630678e" class="r-1oszu61 r-1xc7w19 r-1phboty r-1yadl64 r-deolkf r-6koalj r-1ro0kt6 r-eqz5dr r-16y2uox r-1wbh5a2 r-crgep1 r-ifefl9 r-bcqeeo r-t60dpp r-bnwqim r-417010"><div dir="auto" class="css-901oao r-1nf4jbm r-gg6oyi r-ubezar r-16dba41 r-135wba7 r-fdjqy7 r-1xnzce8"><span data-key="5fbc41222867480a8cde9b75aee94efa"><span data-offset-key="5fbc41222867480a8cde9b75aee94efa:0">GitBook</span></span></div></div></div></div></div></div></div></div></div><div style="contain-intrinsic-size: 0px 56px;"><div class="css-1dbjc4n r-bnwqim"><div data-rnw-media-class="3364-196__3362-_b1430-196" class="css-1dbjc4n r-1ro0kt6 r-18u37iz r-16y2uox r-1wbh5a2 r-1777fci"><div class="css-1dbjc4n r-1ro0kt6 r-16y2uox r-1wbh5a2 r-1l5ssaz"><div data-rnw-media-class="3363-__3361" class="css-1dbjc4n"><div class="css-1dbjc4n"><div data-key="16c8be409fb344aea30fd1040858e443" class="r-1oszu61 r-1xc7w19 r-1phboty r-1yadl64 r-deolkf r-6koalj r-1mlwlqe r-eqz5dr r-1q142lx r-crgep1 r-ifefl9 r-bcqeeo r-t60dpp r-xd6kpl r-1ygmrgt r-1yzf0co r-bnwqim r-417010"><div data-block-content="16c8be409fb344aea30fd1040858e443" class="r-1oszu61 r-1xc7w19 r-1phboty r-1yadl64 r-deolkf r-6koalj r-1ro0kt6 r-eqz5dr r-16y2uox r-1wbh5a2 r-crgep1 r-ifefl9 r-bcqeeo r-t60dpp r-bnwqim r-417010"><h3 data-rnw-media-class="__" class="r-obd0qt r-1xc7w19 r-1phboty r-1yadl64 r-deolkf r-6koalj r-1mlwlqe r-18u37iz r-1q142lx r-crgep1 r-ifefl9 r-bcqeeo r-t60dpp r-bnwqim r-417010" id="doska-i-ee-struktura"><div dir="auto" data-rnw-media-class="213__212" class="css-901oao r-1nf4jbm r-1loqt21 r-fdjqy7 r-1xnzce8" id="text-doska-i-ee-struktura"><span data-key="6447d5044ac84a32b65d318abf57b738"><strong data-slate-leaf="true" data-offset-key="6447d5044ac84a32b65d318abf57b738:0" class="r-b88u0q r-crgep1">Доска и ее структура:</strong></span><a href="#doska-i-ee-struktura" aria-label="Direct link to heading" data-rnw-int-class="nearest_274__354-4012_" class="css-4rbku5 css-901oao css-16my406 r-1awozwy r-1loqt21 r-xoduu5 r-1jkjb r-orgf3d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" preserveAspectRatio="xMidYMid meet" class="r-10ptun7" style="vertical-align: middle; width: 16px;"><path d="M4 9h16M4 15h16M10 3L8 21M16 3l-2 18"></path></svg></a></div></h3></div></div></div></div></div></div></div></div><div style="contain-intrinsic-size: 0px 40px;"><div class="css-1dbjc4n r-bnwqim"><div data-rnw-media-class="3364-196__3362-_b1430-196" class="css-1dbjc4n r-1ro0kt6 r-18u37iz r-16y2uox r-1wbh5a2 r-1777fci"><div class="css-1dbjc4n r-1ro0kt6 r-16y2uox r-1wbh5a2 r-1l5ssaz"><div data-rnw-media-class="3363-__3361" class="css-1dbjc4n"><div class="css-1dbjc4n"><div data-key="4ce7cb381412490a8bd7cecf75cdfd73" class="r-1oszu61 r-1xc7w19 r-1phboty r-1yadl64 r-deolkf r-6koalj r-1mlwlqe r-eqz5dr r-1q142lx r-crgep1 r-ifefl9 r-bcqeeo r-t60dpp r-xd6kpl r-tskmnb r-1yzf0co r-bnwqim r-417010"><div data-block-content="4ce7cb381412490a8bd7cecf75cdfd73" class="r-1oszu61 r-1xc7w19 r-1phboty r-1yadl64 r-deolkf r-6koalj r-1ro0kt6 r-eqz5dr r-16y2uox r-1wbh5a2 r-crgep1 r-ifefl9 r-bcqeeo r-t60dpp r-bnwqim r-417010"><div dir="auto" class="css-901oao r-1nf4jbm r-gg6oyi r-ubezar r-16dba41 r-135wba7 r-fdjqy7 r-1xnzce8"><span data-key="925afeab52d1437aba3a8b873b4ea91c"><em data-slate-leaf="true" data-offset-key="925afeab52d1437aba3a8b873b4ea91c:0" class="r-36ujnk r-crgep1">Agile</em><span data-offset-key="925afeab52d1437aba3a8b873b4ea91c:1">-</span><em data-slate-leaf="true" data-offset-key="925afeab52d1437aba3a8b873b4ea91c:2" class="r-36ujnk r-crgep1">доска</em><span data-offset-key="925afeab52d1437aba3a8b873b4ea91c:3"> — визуальный инструмент для распределения и отслеживания работ</span></span></div></div></div></div></div></div></div></div></div><div style="contain-intrinsic-size: 0px 88px;"><div class="css-1dbjc4n r-bnwqim"><div data-rnw-media-class="3364-196__3362-_b1430-196" class="css-1dbjc4n r-1ro0kt6 r-18u37iz r-16y2uox r-1wbh5a2 r-1777fci"><div class="css-1dbjc4n r-1ro0kt6 r-16y2uox r-1wbh5a2 r-1l5ssaz"><div data-rnw-media-class="3363-__3361" class="css-1dbjc4n"><div class="css-1dbjc4n"><div data-key="2ac78f3377ad4421aedb3bef7b0e259e" class="r-1oszu61 r-1xc7w19 r-1phboty r-1yadl64 r-deolkf r-6koalj r-1mlwlqe r-eqz5dr r-1q142lx r-crgep1 r-ifefl9 r-bcqeeo r-t60dpp r-xd6kpl r-tskmnb r-1yzf0co r-bnwqim r-417010"><div data-block-content="2ac78f3377ad4421aedb3bef7b0e259e" class="r-1oszu61 r-1xc7w19 r-1phboty r-1yadl64 r-deolkf r-6koalj r-1ro0kt6 r-eqz5dr r-16y2uox r-1wbh5a2 r-crgep1 r-ifefl9 r-bcqeeo r-t60dpp r-bnwqim r-417010"><div dir="auto" class="css-901oao r-1nf4jbm r-gg6oyi r-ubezar r-16dba41 r-135wba7 r-fdjqy7 r-1xnzce8"><span data-key="4cc8f3fad1ef4f65a66182e96d2306d0"><span data-offset-key="4cc8f3fad1ef4f65a66182e96d2306d0:0">Состоит из задач и жизненных циклов, а также свимлейнов, являющимися подкатегориями для задач. Доска реализует систему Kanban, который является методом управления разработкой, реализующим принцип «точно в срок».</span></span></div></div></div></div></div></div></div></div></div><div style="contain-intrinsic-size: 0px 40px;"><div class="css-1dbjc4n r-bnwqim"><div data-rnw-media-class="3364-196__3362-_b1430-196" class="css-1dbjc4n r-1ro0kt6 r-18u37iz r-16y2uox r-1wbh5a2 r-1777fci"><div class="css-1dbjc4n r-1ro0kt6 r-16y2uox r-1wbh5a2 r-1l5ssaz"><div data-rnw-media-class="3363-__3361" class="css-1dbjc4n"><div class="css-1dbjc4n"><div data-key="bfe247090e2b42dd93ffb6a205c282a6" class="r-1oszu61 r-1xc7w19 r-1phboty r-1yadl64 r-deolkf r-6koalj r-1mlwlqe r-eqz5dr r-1q142lx r-crgep1 r-ifefl9 r-bcqeeo r-t60dpp r-xd6kpl r-tskmnb r-1yzf0co r-bnwqim r-417010"><div data-block-content="bfe247090e2b42dd93ffb6a205c282a6" class="r-1oszu61 r-1xc7w19 r-1phboty r-1yadl64 r-deolkf r-6koalj r-1ro0kt6 r-eqz5dr r-16y2uox r-1wbh5a2 r-crgep1 r-ifefl9 r-bcqeeo r-t60dpp r-bnwqim r-417010"><div dir="auto" class="css-901oao r-1nf4jbm r-gg6oyi r-ubezar r-16dba41 r-135wba7 r-fdjqy7 r-1xnzce8"><span data-key="a3953a46196745818ec130e3e758d9dc"><strong data-slate-leaf="true" data-offset-key="a3953a46196745818ec130e3e758d9dc:0" class="r-b88u0q r-crgep1">Интеграция с системой контроля версий:</strong></span></div></div></div></div></div></div></div></div></div><div style="contain-intrinsic-size: 0px 40px;"><div class="css-1dbjc4n r-bnwqim"><div data-rnw-media-class="3364-196__3362-_b1430-196" class="css-1dbjc4n r-1ro0kt6 r-18u37iz r-16y2uox r-1wbh5a2 r-1777fci"><div class="css-1dbjc4n r-1ro0kt6 r-16y2uox r-1wbh5a2 r-1l5ssaz"><div data-rnw-media-class="3363-__3361" class="css-1dbjc4n"><div class="css-1dbjc4n"><div data-key="e9a77e3caf914bb68d80e7c780f606ec" class="r-1oszu61 r-1xc7w19 r-1phboty r-1yadl64 r-deolkf r-6koalj r-1mlwlqe r-eqz5dr r-1q142lx r-crgep1 r-ifefl9 r-bcqeeo r-t60dpp r-xd6kpl r-tskmnb r-1yzf0co r-bnwqim r-417010"><div data-block-content="e9a77e3caf914bb68d80e7c780f606ec" class="r-1oszu61 r-1xc7w19 r-1phboty r-1yadl64 r-deolkf r-6koalj r-1ro0kt6 r-eqz5dr r-16y2uox r-1wbh5a2 r-crgep1 r-ifefl9 r-bcqeeo r-t60dpp r-bnwqim r-417010"><div dir="auto" class="css-901oao r-1nf4jbm r-gg6oyi r-ubezar r-16dba41 r-135wba7 r-fdjqy7 r-1xnzce8"><span data-key="c4b6ec3028fa465088b962712c4088cd"><span data-offset-key="c4b6ec3028fa465088b962712c4088cd:0">Есть возможность связывания коммитов с задачами.</span></span></div></div></div></div></div></div></div></div></div><div style="contain-intrinsic-size: 0px 56px;"><div class="css-1dbjc4n r-bnwqim"><div data-rnw-media-class="3364-196__3362-_b1430-196" class="css-1dbjc4n r-1ro0kt6 r-18u37iz r-16y2uox r-1wbh5a2 r-1777fci"><div class="css-1dbjc4n r-1ro0kt6 r-16y2uox r-1wbh5a2 r-1l5ssaz"><div data-rnw-media-class="3363-__3361" class="css-1dbjc4n"><div class="css-1dbjc4n"><div data-key="925473a23afd4149b74cbf49cec6ef91" class="r-1oszu61 r-1xc7w19 r-1phboty r-1yadl64 r-deolkf r-6koalj r-1mlwlqe r-eqz5dr r-1q142lx r-crgep1 r-ifefl9 r-bcqeeo r-t60dpp r-xd6kpl r-1ygmrgt r-1yzf0co r-bnwqim r-417010"><div data-block-content="925473a23afd4149b74cbf49cec6ef91" class="r-1oszu61 r-1xc7w19 r-1phboty r-1yadl64 r-deolkf r-6koalj r-1ro0kt6 r-eqz5dr r-16y2uox r-1wbh5a2 r-crgep1 r-ifefl9 r-bcqeeo r-t60dpp r-bnwqim r-417010"><h4 data-rnw-media-class="__" class="r-obd0qt r-1xc7w19 r-1phboty r-1yadl64 r-deolkf r-6koalj r-1mlwlqe r-18u37iz r-1q142lx r-crgep1 r-ifefl9 r-bcqeeo r-t60dpp r-bnwqim r-417010" id="pochemu-vybrali"><div dir="auto" data-rnw-media-class="217__213" class="css-901oao r-1nf4jbm r-1loqt21 r-fdjqy7 r-1xnzce8" id="text-pochemu-vybrali"><span data-key="3714a3281f604aa1ab4fa62000cd71a0"><span data-offset-key="3714a3281f604aa1ab4fa62000cd71a0:0">Почему выбрали:</span></span><a href="#pochemu-vybrali" aria-label="Direct link to heading" data-rnw-int-class="nearest_274__354-4012_" class="css-4rbku5 css-901oao css-16my406 r-1awozwy r-1loqt21 r-xoduu5 r-1jkjb r-orgf3d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" preserveAspectRatio="xMidYMid meet" style="height: 12px; vertical-align: middle; width: 12px;"><path d="M4 9h16M4 15h16M10 3L8 21M16 3l-2 18"></path></svg></a></div></h4></div></div></div></div></div></div></div></div><div style="contain-intrinsic-size: 0px 64px;"><div class="css-1dbjc4n r-bnwqim"><div data-rnw-media-class="3364-196__3362-_b1430-196" class="css-1dbjc4n r-1ro0kt6 r-18u37iz r-16y2uox r-1wbh5a2 r-1777fci"><div class="css-1dbjc4n r-1ro0kt6 r-16y2uox r-1wbh5a2 r-1l5ssaz"><div data-rnw-media-class="3363-__3361" class="css-1dbjc4n"><div class="css-1dbjc4n"><div data-key="3cdc012a55df461fafc87e7fae0aabbb" class="r-1oszu61 r-1xc7w19 r-1phboty r-1yadl64 r-deolkf r-6koalj r-1mlwlqe r-eqz5dr r-1q142lx r-crgep1 r-ifefl9 r-bcqeeo r-t60dpp r-xd6kpl r-tskmnb r-1yzf0co r-bnwqim r-417010"><div data-block-content="3cdc012a55df461fafc87e7fae0aabbb" class="r-1oszu61 r-1xc7w19 r-1phboty r-1yadl64 r-deolkf r-6koalj r-1ro0kt6 r-eqz5dr r-16y2uox r-1wbh5a2 r-crgep1 r-ifefl9 r-bcqeeo r-t60dpp r-bnwqim r-417010"><div dir="auto" class="css-901oao r-1nf4jbm r-gg6oyi r-ubezar r-16dba41 r-135wba7 r-fdjqy7 r-1xnzce8"><span data-key="b6bcdb14581f44a293f0c9c26435d186"><span data-offset-key="b6bcdb14581f44a293f0c9c26435d186:0">YouTrack и GitBook были ыбраны по причинамы высокой распространённости и простоты в испоьзовании.</span></span></div></div></div></div></div></div></div></div></div></div></div><div data-rnw-media-class="3487__3486_b1430-196" class="css-1dbjc4n r-18u37iz r-1777fci r-11c0sde"><div class="css-1dbjc4n r-1ro0kt6 r-16y2uox r-1wbh5a2 r-1l5ssaz"><div data-rnw-media-class="3490__3489" class="css-1dbjc4n"><div data-rnw-media-class="__187_b910-188" class="css-1dbjc4n r-1peese0"><a href="https://devtools-4.gitbook.io/lab-3/progress/technical-documentation" data-rnw-media-class="__" data-rnw-int-class="BaseCard__1852-__1844-4131-" class="css-4rbku5 css-1dbjc4n r-1awozwy r-14lw9ot r-190qawg r-z2wwpe r-rs99b7 r-1loqt21 r-1ro0kt6 r-18u37iz r-16y2uox r-1wbh5a2 r-1udh08x r-nsbfu8 r-1otgn73 r-eafdt9 r-1clhhh9 r-lrvibr"><div class="css-1dbjc4n r-88pszg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" preserveAspectRatio="xMidYMid meet" data-rnw-int-class="nearest__354-4012__" class="r-1rasi3h r-1472mwg" style="vertical-align: middle; width: 24px;"><path d="M19 12H5M12 19l-7-7 7-7"></path></svg></div><div class="css-1dbjc4n r-obd0qt r-1ro0kt6 r-16y2uox r-1wbh5a2"><div class="css-1dbjc4n"><div dir="auto" class="css-901oao r-1rasi3h r-gg6oyi r-1enofrn r-16dba41 r-14yzgew">Progress - Previous</div></div><div dir="auto" data-rnw-int-class="nearest___354-4012_" class="css-901oao css-vcwn7f r-1nf4jbm r-gg6oyi r-ubezar r-majxgm r-135wba7">Technical documentation</div></div></a></div><div class="css-1dbjc4n r-1yv4afn r-5kkj8d r-1ygmrgt"><div data-rnw-media-class="_188_187" class="css-1dbjc4n r-1awozwy r-1wtj0ep"><div data-rnw-media-class="_162_" class="css-1dbjc4n r-1ro0kt6 r-16y2uox r-1wbh5a2"><div dir="auto" class="css-901oao r-1rasi3h r-gg6oyi r-1b43r93 r-16dba41 r-hbpseb">Last modified <span aria-label="Nov 20, 2022, 8:53 PM" class="css-901oao css-16my406">27m ago</span></div></div></div></div></div></div></div></div></main></div><aside aria-label="Page outline" data-rnw-media-class="hidden__1kbfcbz_b1430-hidden" class="r-1oszu61 r-k200y r-1xc7w19 r-1phboty r-1yadl64 r-deolkf r-6koalj r-1mlwlqe r-eqz5dr r-1q142lx r-crgep1 r-pw2am6 r-icyqz7 r-1mkpi1y r-ifefl9 r-bcqeeo r-1rnoaur r-t60dpp r-gtdqiz r-417010" style="top: 104px;" data-testid="page.outline"><div class="css-1dbjc4n r-1peese0 r-hu79xy"><div class="css-1dbjc4n r-1mdbw0j r-wk8lta r-5njf8e"><div data-rnw-int-class="nearest____" tabindex="0" class="css-1dbjc4n r-1awozwy r-1loqt21 r-18u37iz r-dnmrzs r-1guathk r-oyd9sg r-1otgn73 r-eafdt9 r-1i6wzkk r-lrvibr r-7xmw5f"><div class="css-1dbjc4n r-1kb76zh"><svg viewBox="0 0 16 16" fill="none" preserveAspectRatio="xMidYMid meet" data-rnw-int-class="nearest___354-4012_" class="r-1rasi3h r-10ptun7" style="vertical-align: middle; width: 16px;"><path d="M14.11 6.6l-.16-.09c-.042.343-.13.68-.26 1A3 3 0 0115 10a3 3 0 01-3 3H8a3 3 0 010-6h.82A3 3 0 009 6H8a4 4 0 000 8h4a4 4 0 002.11-7.4z" fill="currentColor"></path><path d="M1.89 9.4l.16.09c.042-.343.13-.68.26-1A3 3 0 011 6a3 3 0 013-3h4a3 3 0 110 6h-.82A3 3 0 007 10h1a4 4 0 000-8H4a4 4 0 00-2.11 7.4z" fill="currentColor"></path></svg></div><div dir="auto" data-rnw-int-class="nearest___354-4012_" class="css-901oao css-vcwn7f r-1bnj018 r-1ro0kt6 r-16y2uox r-1wbh5a2 r-gg6oyi r-1b43r93 r-16dba41 r-hbpseb">Copy link</div></div></div></div><div class="css-1dbjc4n r-146iojx"><div class="css-1dbjc4n r-1awozwy r-18u37iz r-5oul0u r-1guathk"><div dir="auto" class="css-901oao r-1rasi3h r-gg6oyi r-1enofrn r-b88u0q r-19r33im r-14yzgew r-tsynxw">On this page</div></div><div data-rnw-int-class="nearest____" tabindex="0" class="css-1dbjc4n r-855088 r-ms8t9i r-1loqt21 r-18u37iz r-15zivkp r-lqms97 r-14gqq1x r-dnmrzs r-1guathk r-1otgn73 r-eafdt9 r-1i6wzkk r-lrvibr r-7xmw5f"><div dir="auto" data-rnw-int-class="nearest__354-4012__" class="css-901oao css-vcwn7f r-1bnj018 r-gg6oyi r-1b43r93 r-16dba41 r-hbpseb r-1jkjb">Система документирования:</div></div><div data-rnw-int-class="nearest____" tabindex="0" class="css-1dbjc4n r-855088 r-ms8t9i r-1loqt21 r-18u37iz r-15zivkp r-lqms97 r-14gqq1x r-dnmrzs r-1guathk r-1otgn73 r-eafdt9 r-1i6wzkk r-lrvibr r-7xmw5f"><div dir="auto" data-rnw-int-class="nearest__354-4012__" class="css-901oao css-vcwn7f r-1bnj018 r-gg6oyi r-1b43r93 r-16dba41 r-hbpseb r-1jkjb">Доска и ее структура:</div></div></div></aside></div></div></div></div></div></div>
+        <script>
+            // Rendered with GitBook 10.9.201-1bb2ebc614f86aec12066dfe247dba3972285d26-3497017375
+            // Space 88GZRmcqzcxgcn6et6Qz
+            
+            window.__GITBOOK_WAS_SSR = true;
+            window.__GITBOOK_INITIAL_PROPS__ = "㞂‖འ츂аⶁ䱀⸐Ӆͱ萐ͥ´°݀㦀阰Ѩ䃖雑ࠀ킀쉐ꀁ䄌〘䄐䃔聦⸠ﯱ耂娼摩ㆁ茀Δ琁⇓ꚽ☑堆や蹔ᴉ걭ĶUᵙ蒢쀈䀓챀ό\t䀊䀑䀍䀃鸩᪀Հඁ騠᱇媚쀑츀ቀ၀مଶ쀉蹉쑌䉊噛馅ᠳᄫ​尩 ௚쐯⸍┆ഺ⁮䈀৚脎 硝踌䀓尺娠ќ⨜’䀞哺ꀎ䀝\udaba婇你͎䔉Ȁ૖豀ᆀೀীݦ뇉炴⠭Ƌ䈣퀺”\u0015솋ഇ熬急딅ฑ䏥ᄨ堔̎䝅챐븬ॆƅϱ汰ⰱ㴃ꗢ⬵䴩쭋焐灨ਁ铉♳저٩䲠௭쟠⃦ᢀ㒻䭢适쩳㘟䵏\udba2隣嵎⤏ຣᓦ屒챲⚺ꦰ琍멈卑厚狊婂霏襀殭곗䮵娢ᘏ崵̏㗛ꇴ뤑㕻䶠哝ᜢ㽓耝判䒹↺㨆ኜ⑆뇁㔀镒鲽퉹惀鬤ࡈ贓荶끅ꠂ»溱搀戟ᛦ딹ⲷ酎隟މϰﭘ鸺ྥ䬁予堽꽅ୄ钄嗇༠卙欞鷂a⯦ꥄၣ呴䑍뒊ⷒ簍ꈂ쬆䢗ݽ怔Ǳ瑩欉\u0005頹ᚄ摐ႏ업셈䈀\ud930㾎܉꠴鳒հ䭌ꓥɎ庁䦢昍⎑氤ᔃ聠晘ޔ䁫Ეꒂ傂ↈሤ锠즲岀꘩쩊蚥碰稍褁Ὦ育즢㊗։踄B沐ኍ㌀䔐造ᠾ压֩큐ᛄ䑘谇ᅯኖꕩသ雂씖䶐Z䟤䁁塕ᖙ碇改䎋ࢢ㢑♉퉌蜣줊劂ꊨ​⫈聬驝äᲧ☃쬭줔㳦喗搁㒒厪ā䥦ପ谞∄ꕈ뉕鑺Θဿ蘀紱㠛ᗅ喋뎸᠞舠㐐ತ遤␮2Ǵ䕠㬅捙낌࿠䁈ᐛ菱䈁섚ࠚ써뀹Ე쏖ㄏࠢ裎䒋∨ꨦƢ蹡샦⊅ई쑉䀁ظ缥섰Ղ陔쀵倥衐㦋ৃԆ㬑∆\u0010놤ȑ웄搣澠䀎❬␟ᘖ萤躓뾅钀\u0000";
+            window.__GITBOOK_INITIAL_STATE__ = "㞂⁦ॠ上惎Ű㶬䀮净ค〱밃퀁챀栄ꀭ鸂㠅ḃ駠ᶀ氰ⷀ䕆蕠Ͱ蜂቎焉蓥䶷ªŘβ蠊 啀何တŐယ\udbba僦揯丁劵魴ᨺ拕耴ⅱ랆넀耇鄴攔态〇倀逅鉀°Ţ텠͒諐ȵ䨉芎㎂०䪠ʐᓍ↣愶ጢ샧ꓠҐБ톃⏂䀂戈ղ슉쁂⻨䈈ߗ顇틁聰䂁Ꞁ䇁ꋁ׳膄᳢贫䀄曦ӥ倆敎練㤻㽂ᨘ砀㄃脀彟⃔槃馠蘠끟蜀᜸ƴ䀉撀т萴护6ᣳ㊀ܣ参啲豥ഄ\u0005헰氐碵騄Ə臠ꀐⰆ\uda40焃頠꜇ᬊ᯳҇泶器尩ᖊ⑒蹟⿍쀡鈎ြ㕀࿒烀碼㜀ತ臐嵍wႦ墐ࠁ诐苾䂆Ј뙚개㠨ᐇཧ蘳餎⨌ଂ莚┲蕚ꭖ⏕ᫍ嚻䮫ퟪెựꓚ攕頬阫ᙈͥ둂蝣뒇망鮀ힻ폯崻鶈་뀴ḏᕃ绪㡯詐᪍⛳斦흨眻╂ꢃ踌醁鯭෗　귌a甔Ī㘦㫢䌪ᐆ⭒퀁㗹儎圧锤(₀Ἀ 숈0舀䰠而蠠Тࠂ낀\u0004ᨆ\u0012₀よ㰘°舁耗ࠚ᠀솀⼈㐚؀戠耇ࠠܢ༆ǐ怎∈Ȩ荁࿂ࠇ세栘ư荡᫅ꅄ丝ѡ耀蠨ᰅ톀㒈\u0007䎪᧣ϐ\udc08䷀Òꚨ섢ഌꄠ锄֢ᓅȎ犀䍑퐍ፂ톴ద某ೃᣁㅌ㌴⨁穥뫉덬㖮㙗෋獜༱ຣ똟ៀ\ud8f6뜀숐裩瀂Ꝡ㡊䪖ꙩ\uda6e龦ᧆ榛陧꩘窱龠ᤆ᎚渻ꇆ퐞ᜅŁ䀦ᐏꅄ躪䈒谰⩊呂\u0002衊桩ﲈ湘飇㉉쁀砎ދ셑ሇ芌嬔┲︟韭쫲羫⠂膬䔒葑灖ᮄᇄ椙䓑᠆愘怈∏ё뽻᠃炂䆀㬈„ځ䑅ᬇ墑䔑耼蠴ᴦ¢₈爒藃휄刿趉⽉ᤏ섀ԥ䩨抻瞏ٔ㠨莀㰗쇠뉀ॏ⟂碧䒂\udc43㜏ꄠ༔ޡ桺댽 䄤ୂ좶ⱋ勌먡쯪ꈮ搄ࣨ峊຅䅐ᩘஒ吱✀Ⱄ\udb93䘠㺍큩잣꾡頉㄄큀焘؃탊ڒ\u0006넅芚侾踝సɂ십㨩걋⠉㶋ᩜ\t Ⴊ聝鸅큢搷౺ꢯ謆䏲㐎ฝ䁠╏䋤뤩ꭎꢜ㖫鎘ᢅ얪Ԁ⊤搂䅃⣡ꊈ횩⁚㡹鏲ᗑ槀쒯뉈娪䣨뀈㖯ꆰꤩ꿋窕ꓩ瀞遥ᤦ缭㨚욙ꅩ媶붤穁妌⡥摓䱒詸੐挹險홑㇙哈ཅ爹菈ᙯ≙봹撬䅏悅澎燂鷅傩\u0011౔蜕㬑ཀ酏傥㒬㦡Ⱗ萚譒뉕착夨꜔ﬞቇ棫ᷣꉶ乸ᔻꝌ疵史畄5䃀ꑀỡ\udc3c▀␜แ輸眎秄卄ムଃ衧蚒윁㤙혺坔࢓䀨ĸ䄞鈳芀ᦄɋ봼歄袰㔂丨蠀婴愤憰ア耒䐗ᦉ堮쓁菔ʈ혋腹⃈䁹擈枔폁⅍ㅅᇓ霪뉁ጜ戜灎䧅㦧೥鰅୕撪㧚옋⼘沒慌๝㌹吝駜鹤颰稹ᮃʵ怡疖蔶ࢣ炆⑖ꄉ害ꁵీᡀ邚ၜஇৡᣰ鹓왹켅찊ᯃ튴렐饬뉧뉩览琾雥猨݊㬠ዸ糅ྑ꨸ 嘝蔲周嘡춒⮨Nꅔዌ薫㊄ꔬ궔걍觼粞웝箨蒖艸䚋愼⡄䢹ᚢ汃誱ㄨՠ袓䉩㠅㉲음퇘夢氟뾢凰馤㠐觀怂䘼䠔荩೪ꂆ㊀롱ᮠ棉䉒䀡첞폖篏䗬뵗뫲覦略᫭\udda7뛶뻗⏻䃬ᵃ芷嗦ꏙ笁Ϭﶀ爎⇌㢀实툐揊䄽㗥晷鐐빝෹䌫ڌ\udaae㍁灖馉崀郈ꀉ吪薸袦曬푖讃و瀺ȁ聣辠晪\udc25䚚쬚璱䗑ἄᯨᄀ霄ᦗᇂ냞਀夐刪얤밖ɨ䟨넌ⷄ⢘㈢쑈訁眑씨踗䰚腌⨅ၦﶢ觶臔㯱됳䈬弚Š氄좨ែ箻૽滜쪪鼯醊⦨훽샠쀙Έ꾀䀗ႇᇃ뜃¯蝃頨\b䈅씘⌞ᅯ溃볷臲㸧쳸弫ᚃ蓈ሂÚ뱌懴㰒㠈͢瀶࿈﵇ꞁ༫Ꜽ鐚ᯐ惌섀맷웼᭘ⅎ溅휂⨒Þ㱒䕨៚ꊭ醕蠶剽놸ᐊ욬ꈱ矦㇄뢄❻䒫ᓢ佌隽䩗뭈띯蘠䉈䍼⃍ᄂ䎾蠸մ\ud933稔佷ũ⊻Ұႉ甸虪נ鶟욎皔儨洄ﳳⰔ햤圔Ǡ\ude87\ud8fa齳꾇僽게Θ≁꒰㡴對䑓䅀䈔Ѵᐍ揂⛢\udcdb蝲쾸༡䀖ᵤ׉Ǻ⢏қ鯀࢜ꓫ壥㝢䀠Ɂނ灞謑Ớ앀颒ᶘ䙵㣄⬅ゃ큂ﶣ৞밭៕䍝滭펻県䯝ﮠ鑶ߺ\uda34潌挃㏧ト툀ﹰ찅挤ᑱ순魦䭥ˣ暠缋銣໊ㅸힾ踏⹀磇齂\ud832䔴Ć桂ḣ㰼뷒露\udbe9Ր构ۈ\ud89b㍡沭足똎짙Б嫉渔䓠줝䃄⢀ॲ⎡ᇡ쐤ࣩ䴅쌛颥伶쑣뭭舌\udd8a慎⨄炳衆䨡⇒㬰갔竆ￄ㦧꽺饙㶑链䴊쨜㠊䃇飠⁢㌁餞ۥ喾᷅\udf5f瞨﷌破륾釲뻴浣뉿需蓞஖塖蕤Ⅵ曁㇙鏹쒊肑蔎涞肤ﰤ嘠ຟ᭓湭ⶵ떶\ud9cc硎袱ว쒄蒑鈊䕈椇ꆓᓮ䰨ꊨ햑ྈ㮤번飿줙緾㷠즙잳쩭伏ᛣ슈犲퀪䘠㲀࣓࣑徽樟븬㠦ﶉ焁∤꒓⎒䩍䥥쓞씠ဂႂ̸⾄蝚ᖥၘᠭ눲⪑෨̓鮒됐儝⥃ళ⌮貣␞⎨㓃琣ꇀ㄁쐞⍏Ԃꐙ쁢Ԛ㮨ঢกਲ裧Ṳᜱ犗㥲圵狗㵳䢯⧇诪ྼ℩궊뾠Π聁ᛘ჎뷫麤፫ꫫ꺦⿓脲ㆮ鄑ᄆヸ또䤔鄒躺튞몑ᇘ▥ߧᅰ霙灗ᕰ휝瀷㙙ꢰ䋜ὐ膐଀尦䂘ḡ튈᠂琚煥荊얭梲複琔䌔㤛섎쇀㦃䂠秆ޡ候ు退胨⢂搩ꃠᓑ쐅Ð㝀␆Ⅾ⬃̞ࡁ䐔稟렻䞋᫏逫쾄즂鋸親檨㜂\udc03썰⛺㘘㭰㢛숍᪇遨供줱ꠃ綌槏번⾝䘃雺ꚗ䚤ᢻ둹썰⩁స頗虑踾쮂Ⰰ쾯\ud9db艸Β歌会莀餉贉έ쁜Ⱛ⽅辽ᢽ騉북ꗁ䚥䛬罸䱢楱逸챉쐬崉屷䜆㱹气\u0004㼡䎼C蘽ƍ∁놃艰⣃㡲譠㸃阩ɐⴀ〳ΰᜂĈາ쀔₢ࠁ䀀눺਻̤ⷀ戣ꅨࡀ࠱Ⅸᬂ琵ꏲก퉆⋤ሀ聜㡲\udc0dƀം琀腨❁찐ੀ㌣唈䁐ⷃယꔌ㪀ᨦ䀗ଁ䐜䊤㝃瀔솙ᑄ辇䠼珘蚳요寇鑈웇飇놢樓䩸䔆聜⻹Ɍ⎪栦墠僈⿣唖㘻粂⢀㖠䀔䉪㨃ⱞ쮶ᛀ㠔輐ⶬዉᘃ醮⌀눮쯶⑦鞪Ɦ暧橧˪约ᩱꚚ斉‵ꉰḡ䌨ᔀ茤⤙怜Ơ℁젴À⹀술ਂ醰ሁ‛̲ก怄苉⃀퀡ʈ\"ီ䈐ᬃ᠐ꔠ㦁ҋĄ阁訔䋉㳤怠ዥ ℁扁ǀ\u0002鄌⎢ǐጂ뀇ðἂࠣ¾掣谳暳㏦빪䊨 ‮䉤ᰃḎ胨ᚓ琮퉰ᐃ␙―㹆 Ꮴᜱ͡渔᜺舑帕栩ᐗ׃慕ᜐ⸔ᗑ儗瀅ᚨԔ戅ᐑ紕᜖枑考Ȁ/ᛃᐎ\u0000ᤲ˘✂क़㣀Ⴡ僀။┆脄ꩀ넁耀⍰၊슮䌐⹃ꠌ˰থ감ఁ䈉菇ꛂͦ䔛숨芨ຂ븮ꕍ瀔큢ࡂ슧̞✃ꠋʙޠ鰴샙嶕㜀䈹乧龫⊹箖祷雹羔Ƞ圅桔縃收䭥뙇暲ᝤ‏时䃦쀰爀؀䉎瓦칌ώ拧⹪曧湴ᝎ绦ṱ姥怅ᗤ땝簂Ż埥ቯ䀖빰ᒶ堖㨸灜ڒ瀂钰㇤戼䊤໰䎖귁慗ᙱ儔酗ទ圕児洔兣ᗡ猕煫ᕱ笖鵋ᓱ嬃℉䢔䀸陉疖ॉ鐂ⷃ꾤匩堂開頁楪䁭။膀㪦䰪臠Ⴡ耝\udb9a巆辠殏茚\uda78毚䟄⚲࿅➃䓱뜁ఘ㣺䌷琢触䬣瀴傴剧阪朁ғ焆敽䟢٤荈ࡤ쀘敶稃瀿拸㑦왇࡜ρ讶博⯠㰚짳蚐頜>ⷁ耨실❀퀨聢၃ᐁ튋䲁м뗆娂Ȑ싸⡧虯솯납덊檤᫈枭쟜愶㱍ꙇ蘈卫Һ擆ᱻ꒶!꾤斜狹ꀴ㩬髄⫥䠖뙻晶睦晀Ք蹶쎎浕乌䋥쀵嫤湖坔ṑ罖൰퓞愂赮Ⱦ䓗逇矧቟‖⵨ᘁ唂騱Ò䂃⠨芌㜁䴯孴Ų琱ưࡃ녫䔔嵑ᕝ儔\udd4dᘽ䅱έ픑毕ᅻ픑姕腽俕ﵬ戃廧͓쇂藂턄谂솩纴Ȗ闠∷⥣咴库ꠗ䕪琧䠤嚘㑔㥓閪艙ꭆ똲窃歮땐㺶᭱뚛缡밲暲⼷똠ﰡ뀣ꁩ!僧臠ㅲ蠅ⷀ뀀⊌ᔃ魈뜆䶴왝땜㪀枳땋娃ꠟᯂČㇳ穤쌦映筥쁁䋈㰂咀ԍ働ఠᴌᜃྨጌ냛ཀ햕䕼诙汕죈í⍧ꝁ啧䥔唎䅵蹍哀ᵖ靣垗敶땍瑵滧畣痵秧怐흸읷扲홍柦቏翧བΧ狖ꐅǩɀ퀮䈤ᔂꐾ臄Ȁ暜̨᠁䐉핟直兞䇵\udd51䬕녖巴॰阿䒗㽴镄Зꠎⷁҟ慄ׁꥮ䅄⹀胍蜣七쐼᠁꾣団孋ޥꟻ疦侐욼慻뱅䒇玧ﶫꑇ吩첳䞨઎枰飌轍쯂㣴頭଀᜘à倸쇀׃⽸瀼⤷ᣜຘ챔쀜唐乐▽츼볻칼琯촬\uddca곝ᮬ뱣ꕔ忙卭䛼籴챇㜬侦ȗ䟯饇ꊧඋ偂࣋ଋᲴଡ଼ᣣ죾曼┉獥趧繖村坧奕赕兵룉琵協坋块筕흞潖鹰乞塏\ude67瞍毥䓟瓍屍ག혤틖Ÿ獚᐀萹肘σ␫ᓒꠔ䈰ᎇ擥䃐⥍䕌兵保圕퓋퐴쟕㓓韟歎襻䵉悔楺鐂ㅏ賆镪媗瀺胠㈵莺脄鑂܀⎦츀尪䉛㪃쁈\uda64ୌ贋簢〷䇀ق苎着㰬䀂ᚃꠞ₄ᬀᜐ䎈쩦䣉ຖ얎鞅浖쬀훝氶챁㛋涶읬삞㗻樯螺ⷚ盌㩌祢\udec7卽䝱觍山ú䢌\udcea睘ᕈ̕楖慶룻越힎䫛囗杖쫏唷抮蓈풪쑏睞❄ｶ쵼仪퉎ŌÓ㫋頨胨ʫ䙁熐⣁䅐⢧㫾ប竵ᓔ쏔兩徭铀深䭏ﵓ쀃슙一㞨কꥐ쁜⪃⥓ᰀ雰ⴔ쌋斵烇ꃒ㰽Ⱛ䫹瑻뚲ꛂ쩙氎\ud950Ⱐ칧雄쏀頪胩痂ᘂ蠌ᘺ艚〪鷀㪞槮钚䴂鸙쁧⸉쒴뭨鬥⢞䚤⒜ᙗ䓦枡ಀㄏ䣬ㄋ䳯ⳅꐆ볬౫\ud92e왐껧왓细᳟씜峊଒￀덄坙怯阙貂얍壞嚳ⶎ迲㣵呎梭靳喷咭㻿跊\udbecൈ亷淥绗瞪콵䵌䰏峔⓰Ế榳娙↉뀭썚ᬁ棩ꂨ㝁鸲䋤ਞ뫎䘞\udd57광侭齾Ჺ۱ᶴ퀷䥊㢣襆傐䤌ం嬚闌橯๤섄邻ᥭ실ḃꛞ㯦ﰣᅙƾ杁鸁膰᱁䴙ʚ㮔Ȩ耗⌃ﳼ鿀憐앧ⴞ\ud95c엯곞ﵞ磣嵗揭皾큌痒깾\ud8d6䓿巾횮ོ픁庮轫쀠镲聚\ude23⭾菱贂騧䁩ࡀ椺\udda1淡휖爝ᇷ횝졯鷠韝쀡㷏䶽쏁溤ಶꐐ䫤ᚧ㇆榀㏃邤匥㄀ᛠ弅쥮藅蹈ᒝ㇒랯ꪌϐ㲃엳菤㽃쏸弢푝螌岓瓸ﶒ屮\udba7᳔瘂⻬峹앯봴沠ﱜ勃齛厞䭴−ﮞ⭬⫝̸㙑倖荴᠂蠲聀ଂ븁猨ข븺艤ഁ倡ꀂᆝ蘩羗埭翗㟫糥娼杉쎌૕\udd5f핃届퍟Ꮜ간ﲯ㝧弪ﻯ睍汌㏈\udfea䀱슌ᑃḅō㡲縙(㪀萰뀈ᘂ诗᙭셲哥ᙡㅎ῔\udbd6㓙ۀ㕃氍慣䝃䃆噆鎌풥ၰ欣䜶穗倖꒴䑯㰃โਸ਼钍⌔竻䂚텶⚐痃檋豗ᘴ틝譠먭ᐟ䥜ོ䧓侊疼൪ꠖ該珋芜૬୐姱\udaca囖ꨭ딕ꂛ缹৛粻ㄠ⨉蠁Ś@焃뀆⃯㢀戏f邋븴兢ἂՏ顢ꮲ䔓즻羊ꞁĀ螏鱴䓊삺ڧ\udc96◧唤芨ഠ\ud907젿䂊ી㊃君饧竦鈲ᛓ鵀ਠꋋ㊌牡-㠐룰㺲쏷⮦㴪䅛廚縞㜕랍髢众\uda04셖ᓰﶛ痂毗㟊폓四逜ͤ큀ᐆ␜䃰Ű㏃\u0014Ӥ᱀栉倐耿\udcea몛ﵪ槿彛翟횿뿼䣤é⡀\udcde䴀㞼ꢀ暥爻倁ꁄ둇蹻멷ā浈沧开ᜍ肕ۨ⹀ᴅݙ耤᳘Ꮣ而肐৛䋘ᰳŇଅꥹ丞烋萂᫡ࠅ롖醈ð렁㰮↥焟鶍콨𥉉\ud8ba㏰➜ﲉ䗹뗜鸭퍟ꪬ槫גּ蔍퀎䳵ᮣꃏཀ⢀ࠐ酸聯阀䈉倶ȰĠᩅ簅셄̀庅︯郃ꗥ＋웺翰纲밺栥〃뇘墰Ꞇ鑁㍎㍜\ud8dd폮ऊʚ➤嶒뀤塈끻ὄ覤רㄮꇐ㦸畒䢢텃䁻놰橑鎢马ꄻ얐酂뢛䕞⤐ꑹᗅỾ਌ꎜ舜ᣋ忎舋ꄟ憲葜Á‟㊹HЁ*ʌٸ̀䠥䇔ᐟ䞳䆛㌨뤴⏯ꢜ夘㨾ꁟ석ꂟ磪ꐒ틭鄌筢ᝬւ\uddd1ﰎ鳐磺蠭籅䦌렔꜏螪頱㠅౐ᔘ飅옯\t訟렢ሖ㼪룣픡炏䡽⿝껨誧꘢㟠㝿\udb6a톞⏓㠠ᖏ࣐ↀ␏ဦؼ᳄䰃ဗு옠㠁怉聙᛫琸ధ溜詢뜢紣렫젶匉垘췮൱熛䐌瘠Ḁ뒣r㠪⼀炡耵춸ઠ⾻砽髪だ球ၒ펇ୄ約ǃ螹咀舷₅唀ᵣȚ筯䓬袖冐斊榙ꄐ쑺⧙ḽ衋Ȁ낓蒼Ⓚ䑏〉ነل퐧왉戱䌄䶌㇭㣤蓂㡖략龦䈗푅熅৫骬䨝袭﫢❖ꡩꁂ৐儁ሊ栬xৣ㤦䁢ʹአ耈봷꘰홇窃ગ蟢䘓죧❱䉡ʌJ뱍@甁탗懲蔲骕읋蠼श㯣쀘ǔ׷侸導ಬ懂ﭣ肠씱媌ຮ荶斘ﶘ規뷀፡괟䤴嫢끰憒\\ጀ讎⃊ָ╁ⴌ䡻䉤᳀␇㠔拯㗳龍꺒䴟阽ꄓ圹⟣쌡ྶ屫峉헸渻盒惜çꓽ윭䝄焀렫ꔴ᠃Ḏ\b匼ᤀḇ蠶΄䧱沈鞖ᶽ氰莺谠軣ਣ꓂커⣔腜䓐䴐Ʈ䇟ꁯ咃罙躻꩒脏茐౦㸄놥ⲳ罆尐빎톢璴鸌쒎Һ㘡堓剚駀㚤甫ꤽ䯪䬀ژἍ䕚䅶녵⚲᱀◐퇸뇣㩩봬墑㋂蔾ꥆ쨅抂갅雞갰҄酁ᴆ⡮઀퐶芹쨠⧣轅胊\u0010ḙ句⠡ꥍل䐬ꀢഐ碁␍’ۈṀ਋挋ᑘ阤ᔵ趬–恌譝럄제悴뢃騨꜒켈餮⭅ᡲᰓᄤԨ互뚜⁦鋈Ԝ棠윖㡱잎ɱᎄ鳭ᱳ퇉蹬狣鼜Ꚅ✡鋓鵌閛ߕ㇚谪昬చ䃜씜\udf31⚎訹䔬ᕳ೒걁臖辄ᢁ烊ﹾ䫤ၒ슒퀨ꗅ⤩楊쩞剤৘髎癖덝莬㟆ᒴꁊ鈀岃㙗‷씘ⁱ얐쁀Ặ꾁蠥䆏Ↄᤘ逕럐ԁ輌ꀀ䉚선⍁〷䇴䐰ਃ領遦xԀ젉個堙\u0010쒁怎臃跐⧉뀍罹҃ᤀá跹ȇ퀱℠徠緦ἲ凜ܤ燡㈂编ꓠ䘠䠉耒੨ˠ퀗쪈ㆠ堏䀤ʹᤠ쐰੧ₐ㈁栚큯쫐㈊侔粌䊾ᔠ쒀쐝囐눂搏Ⴤ舘क़䈃ၥʤ᣹㡦腀膈嵸萃邯ဆ썠⦡ꤓ㥃Ꙕ᳀퀬ۀ歂弡⁬ⷈ魃輇衫㤘ꔦ萩㱳.ైᨂ期薊ⱡ睁֍栒¸\ud828젛ܑ⨁ᑃთ쬈⬋⵭큙ᘰ඀➋셬詌Հ猂䪍肪ؤᔁ㨃練쭚ਠ搃쐁鰠ॐ　ꂪǈ뉀辜硉ᒘᎠ헱蠂䇴䵧஁䢤◌⹐ڈ戉퀇膄ف퀨ĺॐ㰂ϙԂ硱竀氫ᤊ氀ꀆ↜囼఑՘ⲵ릀Ḉ苅偐Ӏ怙ಐ⤖㫐챁窴䈆䀏ঞᤊ搆倃삨Ĳ쪃ꃝޠ᧠Є耞ᓄֆ岔\u0001咀A鸔ԗ췞ᐽഡ臢ᘱ构ƍꅀⰂǐ᧡ᵣ聟鐋੔㆓›ᔲؼ冂騑큪Դ㦁관䉕覾骁耑䃼苠␍₼⮊䉟㤠阩繺ŰᲉࠎ⋟칱䂀䱔抄ᒘลଫ䥮쫠闉摖•㡱㑏䁏៎䁀鲭좲䆘啀ࠃለ앬⤰㟲ᙓ₳ꚀᐃᅙƉਐ䠗꒰藂꠹䦐\ud809途喪뎀퐆鲖耠૸ഢ琐ệ蒵넠剒怂⡠틃腵紘$薕捎∉˙䘠ꈃ䀳댢픏牢醖噕粴ג逹僀遆p맅蝈륆褈⪲脖겤Ӿ穪ࡐ尽ᗆ뢅ꬮ䠞âՀᑖ傂놜Ꙅ鵞⋮善ᤠ⸬腟吰め뀛ꢧ薤夁큞뵴៰떅ﰪ⅙债騀讏'꺴ก竊぀흚еᢂ澡튴ֲ錁Úם꧈鎃ꁙ䀘썚ح簣\b윑㫡뼨鍠ڑ뭒꫒ᘰ܀ᢃ祆遮顚퟉쀊⃋힅怫䡤⪨⚀䷴ൕ얍ꉕ岀퀃夡ȩ印煐૨쩤伐瀀ꀀ봑垧ጀ萋䂎薤䗀搙糮芬ꓵࠁ蠌䅔ஒ꺅璳耀蚴㝀ᾝ퀭Ǣ᳀瞨ဲū䘀倔⁡⠺燡栌̤ᢐㄆ퍽쩹妚ퟤ獵蔊곤햮᱋吼᯹⌫怎Ġ\udc6d劕㢪遼Ⱡű蹕㱕,뫹차꬛壒魕쁚ɩ杀ຜ遠窂뮠ቭꅁ兰䘂ᴹʪ건ీ㕙偘㓄ᛠ힫怖聥웂仧訜̼׀젆屵Ðᕈ蒲騨솊嬘츃蜙䑉獄蘥蕆᲍婇㝱䄃쐈ಠᣰᜁⱳ뛐祳큉吩聰萀ͯᦟ쵔揖춥쀨s嫑惟⹗셐ǠȀ쐕à฽ႀ萕旖蟸π㰚횘샐ᗜက瀅샑ꈔ﹃蠒䃸搣΀뀈洂ㆨ㰐낗⌌\u0011⒉斘ও邍嘪䤂쎧譚桺䑘䴑ᐭᖔ㫁暴ሚ䝕㐊ላ尣ᙕ뚁〚脭漚붖좲딱Ⳉ顁㨊ꀫ鐄룰\udd01䭱५㰁남怂گꌻ罕䠩園܂㰯퀯䨦豸ᤄ鲬䕶ꥅ僫贉쀄苜͈ᤒ쀆ꪢϼ阁쪪╀誷뇐⟴핎қ戴ⴂ䰚逗ؼḁ쎅耷熐᣾뤁㾞₢ֈ烀䀀ာ˒㊁逶㒄آ黨䠜䅆푯䒛ꭊꀔÂꌀЀ⸉腿⃎옦項宭ٺ\udb83頟遫膀଀討ᡗ뙍鹀訁倆膴ޠ䌃᠌삖ځ贁㥋湾ⷜ㻦儘㯾䨶蜃趬뤅䪛摄㐓ᄸ蠤䤢⤓䢆䒲⅒뀀ꉅᄨ茳첧䩃ꃑ탨ꁥ剚⣨ꛥΌ᳁쳙ང㛶僼眆齇댌ᙔ첗䩠퇴豐釙녋᠆ఀࠁ宜━튤恷႘若臐ڔ٦點王㣀枅᠘ޙ䊐崕榀㡜鈉̶伀똇尯脻镭俑㠀붮د䞀쯟ಔɾ਀鴅㠆稜\b\u0000ﬤᆀꀨ腙ʎꠁꎮ삙ܖ爆癩鮢䄀읊耐۠Ӂﾫ逍ᛡ妄ၒ̥Ȇ鐤쌸⓸΀璤嘚㊤朖威␍〣ᫀ좴鿫寮Ⅲ麩濩쳒䏲⌀఍龜憌ꈥ諊倆ヌഝரࠁԯৡਣ狥ࠠ邘憼븂掎Ś₳紏阋总֐ᭊꆼ렸٬獠첛ᆖ쪶疲涛沏䏛▹໌ꉼ膬ⵞ훰秼㌡㠆牨Ȉ鴖ꇖ䎄瘈醔䙖얄墏脟舉ᴒቇ귏ࡺ毂芎㠀⠦䚤】\udc8e눟⎅焈꒘䁳쩎兾\ude34\udc1fꁁ昵䈂樟梹͸ⶇ쎑뒝쐳퇊๔鹙\ud85a쥶㚰\udd99⁷퐘㍤ꀈ┱⬶䩲✟ꕖ섄겢㖑ﴦ\u0000腤᝙먳醀뫠鹃팂耚6蔀Џᑴ⍍⟚፰ڏ、둋㹠̙棘.ߓ൪\udc17쌓캐蘎쐞ឬﵤᬻ셵訶础尒冻≘門먿≬軈汐䊓椪➢၁阃⢝䩸x❰থ愊ᔽ蠚䉎࿈撂쀇ᨕ犄棇눞息᥽ꕹ‌Ů\udc78ंထ⁭䐈╮ˉ\u0010檞儺벴䞛≍㱾䐄擠㬧ꤩ즦錬ᥒ븕\udd21უ⅏豥ꩢ駻撧ꔻ⦩䷝뤚\udc1b䶀縍룏Üᷢ늧唾ꦶﭥႮ핅둥釡ਰ⹃郘쪄ŕꪉ䈤␠㨚풴ą駸儃 t歒飆圛␩ëፐ苏魗﮲賡萃蘌Õ䔲Ꙩ홆5֠ᤐ嵠콁薡切 蘘좰ᮖฑ抦쥒⳿豋㝹\u0001奒㸶閲銖銿䩻ꤽ绫䳟諚矩傖秫밸בֿ㩴큎陴豖崺䩲寒岒▾⏉佔ﱁ熿Ἧ瞦⯓謍迒䊔蒮訛젙橕ق㐡銱ਐ㛋䑰첣⧰̄ၱ츍㧞ᩄ鎏浩駄ꐪ绳讽ꄽᜲ흒竤㕳Ԏ閹햌吿䥻鯚䇒躒秳Ꞟ曩쭕쥹㴫酞䫼北澧ڑ𖮛著龐䀭㇘୊咆堖憙׻㠄㏑汈␄憌ꛅ挵ፑঔ㜃ﭮꩍ䌵㖩诉鿔霯⤁탙껺즤哢ҟ꨺혋\uddba構სꅦ攡\udeca眜⨡ꧬ뇒⿓칪∁耎竅꜠同레뷮ԯ垀ജࠄ鴕恔浳໙諂癵냲\ud82c瘁ⲁ칍⡳毭䩂浜㭡觏੺玄Μ搅邔䒮緶嵷溆銱៥榀圛ꓝꛫ㝹맠ᅮ쨆宪\udcee髤ꪛ뤽讞䥺瞓꼻ꟹ㾋᝴擃泾o㮸㷙퐷ꬰ鍮᥽쟮園苂`뇨㠬稀皦眳障곣會㡯๋Ẋ䙵ታ㜺⥣컼扠占趹淡奋֮ʴᛞꬭ엇搇㶗靮擌苉秠\udf42柲먫雨剂ꚛ輴蕡焑㡞ᓊ鈈룕ꊆ椹浤彪༖㜪M쩮ꚁ鮜\udc16ᖹ귊诨淦욿禉긾王쾞⋸봰섪巙欷獚黥뗗뫭珮\udf71튡휶ⷥ䜻猁婀䊿黰궸ҽ鸇⽽⃢대磎ᰌᷖ儰ሀ켃̼맖樳蜀뵛\u0002Ԁ⣌興\u0000";
+            window.__GITBOOK_INITIAL_RENDER__ = true;
+            window.__GITBOOK_LAZY_MODULES__ = [];
+        </script>
+        
+                
+    
+
+<div id="portals-root"><div><div data-rnw-media-class="3618__3617" class="css-1dbjc4n r-1xcajam r-l13dpy"></div></div><div></div></div></body></html>
