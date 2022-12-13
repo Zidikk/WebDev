@@ -24,7 +24,12 @@
     CSS
     ============================================= -->
     <link rel="stylesheet" href="css/main.css">
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/b46789e296.js" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
     <script src="js/counterTime.js"></script>
@@ -43,18 +48,19 @@
 </header><!-- #header -->
 <main>
     <div id="loadTime"></div>
-        <div class="gallery-container">
-            <h1 class="gallery">Галерея</h1>
-            <div class="preloader"></div>
-            <div class="error">Ошибка получения данных</div>
-            <ul class="gallery-ul"></ul>
-            <div class="pages-nav">
-                <button class="previous-button"><</button>
-                <div class="page-number">1</div>
-                <button class="next-button">></button>
-            </div>
+    <div class="gallery-container">
+        <h1 class="gallery">Галерея</h1>
+        <div class="preloader"></div>
+        <div class="error">Ошибка получения данных</div>
+        <ul class="gallery-ul"></ul>
+        <div class="pages-nav">
+            <button class="previous-button"><</button>
+            <div class="page-number">1</div>
+            <button class="next-button">></button>
         </div>
+    </div>
 </main>
+
 <script src="js/gallery.js"></script>
 </body>
 </html>

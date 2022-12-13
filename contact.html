@@ -23,10 +23,16 @@
     CSS
     ============================================= -->
     <link rel="stylesheet" href="css/main.css">
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/b46789e296.js" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
     <script src="js/counterTime.js"></script>
+    <script src="js/swiper.js"></script>
 </head>
 <body>
 <header>
@@ -41,7 +47,45 @@
     </nav><!-- #nav-menu-container -->
 </header><!-- #header -->
 <main>
-    <div id="loadTime"></div>
+    <h1>Да,да, Я</h1>
+    <!-- Slider main container -->
+    <div class="mySwiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <img src="img/me.jpg" alt="12">
+            </div>
+            <div class="swiper-slide">
+                <img src="img/me.jpg" alt="1211">
+            </div>
+            <div class="swiper-slide">
+                <img src="img/me.jpg" alt="sw">
+            </div>
+            <div class="swiper-slide">
+                <img src="img/me.jpg" alt="wqe">
+            </div>
+            ...
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+    </div>
 </main>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        centeredSlides: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+</script>
 </body>
 </html>

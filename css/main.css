@@ -325,3 +325,32 @@ ul.todo-list li input:checked + label {
 .next-button {
     margin-left: 15px;
 }
+
+/* Lab7 */
+
+.mySwiper {
+
+    flex-direction: column;
+    display: flex;
+    padding: 15px;
+    margin: 15px;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+.swiper-slide{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (min-width:100px) and (max-width:500px){
+    img{
+        width: 200px;
+        height:200px;
+    }
+}
