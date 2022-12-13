@@ -251,3 +251,77 @@ ul.todo-list li input:checked + label {
 .remove-List.hidden {
     display: none;
 }
+
+/* Lab6 */
+
+.gallery-container {;
+    align-self: center;
+    margin: auto;
+    padding-top: 60px;
+}
+
+.gallery h1 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    color: #222222;
+    margin-bottom: 30px;
+}
+
+.preloader {
+    margin-right: auto;
+    margin-left: auto;
+    border: 16px solid lightgray;
+    border-top: 16px solid #6e6e6e;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.gallery p {
+    margin-bottom: 15px;
+}
+
+.gallery {
+    flex-direction: column;
+    display: flex;
+    padding: 15px;
+    margin: 15px;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.gallery-ul {
+    justify-content: space-evenly;
+    list-style: none;
+    box-shadow: 0 2px 15px -8px black;
+    word-break: break-word;
+    margin: 30px 30px 0;
+    border-radius: 20px;
+}
+
+.error {
+    display: none;
+    text-align: center;
+    color: red;
+}
+
+.pages-nav {
+    justify-content: center;
+    margin: 15px;
+}
+
+.previous-button {
+    margin-right: 15px;
+}
+
+.next-button {
+    margin-left: 15px;
+}
